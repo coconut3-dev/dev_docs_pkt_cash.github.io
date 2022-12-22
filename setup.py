@@ -4,9 +4,9 @@ VERSION = "1.2.0"
 
 
 setup(
-    name="pkt-docs",
+    name="pkt-docs-dev",
     version=VERSION,
-    url="https://github.com/pkt-cash/pkt-docs",
+    url="https://github.com/coconut3-dev/dev_docs_pkt_cash.github.io",
     license="MIT",
     author="PKT",
     packages=find_packages(),

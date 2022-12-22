@@ -1,8 +1,8 @@
 site_name: PKT Documentation
-site_url: https://docs.pkt.cash/
-site_author: PKT
-site_description: ""
-repo_url: "https://github.com/pkt-cash/pkt-docs"
+site_url: https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/
+site_author: Coconut3
+site_description: "Dev environment"
+repo_url: "https://github.com/coconut3-dev/dev_docs_pkt_cash.github.io"
 
 theme:
   name: null
