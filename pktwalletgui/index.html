@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Dev environment">
+  
+  <meta name="author" content="Coconut3">
+  
+  <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktwalletgui/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <title>PKT Wallet MacOS GUI - PKT Documentation</title>
+  
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+  <link href='https://rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
+    rel='stylesheet' type='text/css'>
+  <link href="../css/bootstrap-custom.css" rel="stylesheet">
+  <link href="../css/base.css" rel="stylesheet">
+  <link href="../css/pkt.css" rel="stylesheet">
+
+  
+  
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+  
+  
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+   
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="c-navigation__top">
+      <div class="container-header flex_display">
+        <div class="c-navigation__top_links flex_display">
+          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="c-navigation__top_links__link c-navigation__top_links__link__deck">Deck</a>
+          <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" id="en" class="c-navigation__top_links__link_whitepaper">Whitepaper</a> 
+          <a href="https://docs.pkt.cash" target="_blank" class="c-navigation__top_links__link">Docs</a> 
+          <div class="c-navigation__top_links_social">
+            <a href="https://discord.gg/pktcash" target="_blank" title="Discord" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-discord.svg" alt="Discord" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://twitter.com/pktcash" target="_blank" title="Twitter" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-twitter.svg" alt="Twitter" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://pkt.chat/" target="_blank" title="PKT Chat" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-pktchat.svg" alt="PKT Chat" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://www.instagram.com/pktcash/" target="_blank" title="Instagram" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-instagram.svg" alt="Instagram" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://www.youtube.com/c/PKTCash/" target="_blank" title="Youtube" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-youtube.svg" alt="Youtube" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div> 
+          <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-header flex_display">
+        <a href="https://pkt.cash/" class="header__logo">
+            <img src="../img/logo-new.svg" alt="PKT Blog">
+        </a>
+        <nav class="header__nav">
+            <ul class="flex_display">
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/utility">Utility</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/build">Build</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/mine">Mine</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/tech">Technology</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/resources">Community</a></li>
+                <li class="menu-item sub-menu-parent">
+                    <a class="header__nav-link dropdown">Resources <svg width="12" height="12" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" xml:space="preserve" fill="#fff" style="enable-background:new 0 0 284.929 284.929"><g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                    L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"></path></g></svg></a>
+                 <ul class="sub-menu">
+                	<li class="menu-item" tab-index="0"><a class="header__nav-link" href="https://pkt.cash/origin-story">PKT Origin Story</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/letter">Letter from CJD</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/cryptoeconomics">Cryptoeconomics</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/network-steward">Network Steward</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/ecosystem">Ecosystem</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/pkt">PKT Cash</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/wallet">Wallet</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/getpkt">Get PKT</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/wpkt">WPKT</a></li>
+                 </ul></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://crypto.pkt.cash/">Blog</a></li>
+            </ul>
+            <div class="header__nav_mobile">
+                <div class="header__nav_mobile_social flex_display">
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://discord.gg/pktcash" target="_blank" title="Discord" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-discord.svg" alt="Discord" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://twitter.com/pktcash" target="_blank" title="Twitter" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-twitter.svg" alt="Twitter" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://pkt.chat/" target="_blank" title="PKT Chat" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-pktchat.svg" alt="PKT Chat" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://www.instagram.com/pktcash/" target="_blank" title="Instagram" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-instagram.svg" alt="Instagram" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://www.youtube.com/c/PKTCash/" target="_blank" title="Youtube" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-youtube.svg" alt="Youtube" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                </div>
+                <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+            </div>
+        </nav>
+        <div id="toggle_nav" class="header__nav__burger"></div>
+    </div>
+  </header>
+
+  
+<section class="posts">
+  <div class="container">
+    <div class="post__category-wrap">
+      <ul class="posts__category">
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="..">Home</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../electrum/">PKT Electrum</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../mining/">Mining</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../mining/pool_setup_guide/">Pool Operation</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/">Pktd</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/pktwallet/">PKTWallet</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../wrapped_pkt/">Wrapped PKT</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/migrating_from_electrum/">Electrum Import</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../PKT_FAQ/">FAQ</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../code_of_conduct/">Code of Conduct</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../commercial/">Commercial</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../useful_tools/">Useful Tools</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../communication/">Communication</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+    
+    
+    <div class="col-md-3 sidebar-wrapper"><div class="bs-sidebar hidden-print affix well" role="complementary">
+  <ul class="nav bs-sidenav">
+    <li class="first-level active">
+      <a href="#pkt-wallet-macos-gui">PKT Wallet MacOS GUI</a>
+    </li>
+    <li class="second-level">
+      <a href="#first-setup">First setup</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#macos">MacOS</a>
+    </li>
+    <li class="second-level">
+      <a href="#setting-up-your-wallet">Setting up your wallet</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#load-existing-wallet-from-seed">Load Existing Wallet From Seed</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#receiving-pkt">Receiving PKT</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#sending-pkt">Sending PKT</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#about-units">About Units</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#statistical-verification">Statistical Verification</a>
+    </li>
+  </ul>
+</div></div>
+    <div class="col-md-9" role="main"> <h1 id="pkt-wallet-macos-gui">PKT Wallet MacOS GUI<a class="headerlink" href="#pkt-wallet-macos-gui" title="Permanent link">&para;</a></h1>
+<p><strong>NOTE</strong>: The PKT Wallet GUI handles mining income well and is a good wallet for those hoping to hold a copy of the blockchain and to keep ownership of their own keys and passphrases for multiple addresses.</p>
+<h2 id="first-setup">First setup<a class="headerlink" href="#first-setup" title="Permanent link">&para;</a></h2>
+<h3 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Download <strong><a href="https://github.com/artrepreneur/Vodun/releases">pktwallet-(version).dmg
+</a></strong></li>
+<li>Open Finder</li>
+<li>Double-click on your Downloads folder and find and double-click on <code>pktwallet-(version).dmg</code> to open the disk image</li>
+<li><img alt="pkt_wallet_osx_find_dmg.png" src="pkt_wallet_osx_find_dmg.png" /></li>
+<li>A new window will open with the PKT Wallet app, click and drag it into your Applications folder</li>
+<li><img alt="pkt_wallet_osx_copy_to_applications.png" src="pkt_wallet_osx_copy_to_applications.png" /></li>
+<li>Press Command+Space to open your Spotlight Search and type PKT Wallet, when you see the PKT Wallet app, press the Enter key to open it.</li>
+<li><img alt="pkt_wallet_osx_launch.png" src="pkt_wallet_osx_launch.png" /></li>
+<li>The first time PKT Wallet is opened, you will get a popup asking you if you want to open it, click <strong>open</strong></li>
+<li><img alt="pkt_wallet_osx_firstlaunch.png" src="./pkt_wallet_osx_firstlaunch.png" /></li>
+<li>Continue with <strong><a href="#setting-up-your-wallet">Setting up your wallet</a></strong> or <strong><a href="load-existing-wallet-from-seed">Load Existing Wallet From Seed</a></strong> below.</li>
+</ol>
+<h2 id="setting-up-your-wallet">Setting up your wallet<a class="headerlink" href="#setting-up-your-wallet" title="Permanent link">&para;</a></h2>
+<p>Before you can begin using PKT, you need to setup your wallet, this means writing down your secret key and setting passwords so your PKT will stay safe.</p>
+<p>A video tutorial is available for this method:</p>
+<p><a href="https://www.youtube.com/watch?v=JqDSlfQuMP8"><img alt="Set up your wallet" src="https://img.youtube.com/vi/JqDSlfQuMP8/0.jpg" /></a></p>
+<ol>
+<li>You will be asked to create a new wallet. Click "Create Wallet"
+<img alt="pkt_wallet_create_wallet" src="pkt_wallet_create_wallet.png" /></li>
+<li>Enter passphrase to encrypt your wallet. This passphrase must have upper case and lower case letters and numbers. Retype the passphrase to match and click the "Enter" button
+<img alt="pkt_wallet_create_passphrase" src="pkt_wallet_create_passphrase.png" /></li>
+<li>You will be asked if you want to import an existing seed. Click the "Continue Without Seed" button to continue.
+<img alt="pkt_wallet_continue" src="pkt_wallet_continue.png" /></li>
+<li>A 15-word wallet seed will be created for you. Write this seed down. It enables you to open your PKT wallet on another computer or smartphone, for example if your current computer dies. It is advisable to write this on a piece of paper and store it in a safe place. Click "Open Wallet" to continue.
+<img alt="pkt_wallet_seed" src="pkt_wallet_seed.png" /></li>
+<li>You will be brought to the main "Balances" screen. By default you have no addresses, so you will need to create one.
+<img alt="pkt_wallet_balances_empty." src="pkt_pkt_wallet_balances_empty.png" /></li>
+<li>Click the "Create Address" button, and then click the "Generate" button to generate a new address. The resulting code is the public address which people can pay you at.
+<img alt="pkt_wallet_generate_address" src="pkt_wallet_generate_address.png" /></li>
+<li>Click "Balances" again to display your balances. By default, accounts with zero PKT will not be displayed unless you click "Get All Addresses"
+<img alt="pkt_wallet_balances" src="pkt_wallet_balances.png" /></li>
+</ol>
+<h2 id="load-existing-wallet-from-seed">Load Existing Wallet From Seed<a class="headerlink" href="#load-existing-wallet-from-seed" title="Permanent link">&para;</a></h2>
+<p>Before you can begin using PKT, you need to setup your wallet, this means writing down your secret key and setting passwords so your PKT will stay safe.</p>
+<p>A video tutorial is available for this method:</p>
+<p><a href="https://youtu.be/c5cgrYDkEzI"><img alt="Load your wallet from seet" src="https://img.youtube.com/vi/c5cgrYDkEzI/0.jpg" /></a></p>
+<ol>
+<li>You will be asked to create a new wallet. Click "Create Wallet"
+<img alt="pkt_wallet_create_wallet" src="pkt_wallet_create_wallet.png" /></li>
+<li>Enter passphrase to encrypt your wallet. This passphrase must have upper case and lower case letters and numbers. Retype the passphrase to match and click the "Enter" button
+<img alt="pkt_wallet_create_passphrase" src="pkt_wallet_create_passphrase.png" /></li>
+<li>You will be asked if you want to import an existing seed. Type in your wallet seed and <strong>any</strong> passphrase. Click the "Continue With Seed" button to continue.
+<img alt="pkt_wallet_continue" src="pkt_wallet_continue.png" /></li>
+<li>Your 15-word wallet seed will be displayed on the next screen. Write this seed down. It enables you to open your PKT wallet on another computer or smartphone, for example if your current computer dies. It is advisable to write this on a piece of paper and store it in a safe place. If you have a legacy wallet (from versions prior to 1.0.0), you will never be able to retrieve this seed again from the app. Click "Open Wallet" to continue.
+<img alt="pkt_wallet_seed_with_seed" src="pkt_wallet_seed_with_seed.png" /></li>
+<li>You will be brought to the main "Balances" screen. By default you have no addresses, so you will need to create one.
+<img alt="pkt_wallet_balances_empty." src="pkt_pkt_wallet_balances_empty.png" /></li>
+<li>Click the "Create Address" button, and then click the "Generate" button to generate a new address. The resulting code is the public address which people can pay you at. If this wallet previously had a wallet, address is actually an exsting one that has been retrieved, rather than a newly created address.
+<img alt="pkt_wallet_generate_address" src="pkt_wallet_generate_address.png" /></li>
+<li>Click "Balances" again to display your balances. By default, accounts with zero PKT will not be displayed unless you click "Get All Addresses".
+<img alt="pkt_wallet_balances" src="pkt_wallet_balances.png" /></li>
+<li>It may take several hours for the app to sync the blockchain for the first time. During that time, balances will not be available for your addresses. You will have to verify the balance on the address using the <a href="https://explorer.pkt.cash/">PKT Blockchain Explorer</a></li>
+<li>Click "Receive" and select the wallet you want to inspect
+<img alt="pkt_wallet_receive" src="pkt_wallet_receive.png" /></li>
+<li>Copy and paste the address into the search field of the PKT Blockchain Explorer, then click the "Search" icon.
+<img alt="pkt_explorer_search" src="pkt_explorer_search.png" /></li>
+</ol>
+<h2 id="receiving-pkt">Receiving PKT<a class="headerlink" href="#receiving-pkt" title="Permanent link">&para;</a></h2>
+<ol>
+<li>To receive coins, you need to create a new PKT <em>address</em></li>
+<li>Click the "Receive" tab</li>
+<li>Type a description for the purpose of receiving the coins, this will appear in the notification when you get paid</li>
+<li>Set the expiration, if this is not an <em>invoice</em>, you can choose "never"
+<img alt="pkt_wallet_receive" src="pkt_wallet_receive.png" /></li>
+<li>After you click "Request", your wallet will create a new address and copy it to your clipboard so you can send it to the person paying you (or transfer money to your new wallet)</li>
+<li>When PKT gets sent to your new address, you will get a notification. It says "unconfirmed" because the transaction has not yet been included in the history of the blockchain.</li>
+<li>Congratulations, you have received your first PKT. It make take some time before the transaction is confirmed by the network and the PKT is formally in your account.</li>
+</ol>
+<h2 id="sending-pkt">Sending PKT<a class="headerlink" href="#sending-pkt" title="Permanent link">&para;</a></h2>
+<ol>
+<li>To pay PKT to someone else, click on the Send tab and paste the address to be paid</li>
+<li>Type a description of the payment, this is just for you, it will not be sent to the person you are paying</li>
+<li>Enter the amount to be paid</li>
+<li>Click Pay
+<img alt="pkt_wallet_send" src="pkt_wallet_send.png" /></li>
+<li>You will be prompted to enter your <em>wallet passphrase</em> in order to decrypt the wallet for one brief moment to send the PKT</li>
+<li>Every transaction requires a <em>fee</em> for inclusion in the blockchain, this is a <em>very</em> small cost: 132 nPKT is one hundred and thirty two <em>nano-PKT</em> (that means <strong>billionths</strong>, i.e. 0.000000132 PKT)</li>
+<li>After you enter your passphrase and click "send", you will see a <em>transaction ID</em>, this set of numbers and letters uniquely identifies your transaction and can be used to view it in the block explorer.</li>
+<li>Just like when receiving, your transaction will appear first as "unconfirmed" and then later it will switch to a clock when it has been included in the blockchain.</li>
+<li>When people consider a transaction to be "complete" depends on the merchant, but in after some time the transaction will be confirmed and the PKT be in the recipient's account. Congratulations, you've sent PKT!</li>
+</ol>
+<h2 id="about-units">About Units<a class="headerlink" href="#about-units" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Each PKT is made up of 1000 milli-PKT, denoted <code>mPKT</code></li>
+<li>Each milli-PKT is sub-divided into 1000 micro-PKT, denoted <code>uPKT</code></li>
+<li>Each micro-PKT is sub-divided into 1000 nano-PKT, denoted <code>nPKT</code></li>
+</ul>
+<h3 id="statistical-verification">Statistical Verification<a class="headerlink" href="#statistical-verification" title="Permanent link">&para;</a></h3>
+<p>PKT Electrum makes the job of an attacker hard by asking for an unpredictable random set of PacketCrypt proofs, the chance of any give block being verified is based on the distance between the tip of the chain and that block. The chance is defined as <code>MIN(100%, K / distance_from_tip)</code> where <code>K</code> is a constant which we set at <code>20</code> to make PKT Electrum verify around 200 blocks total.</p>
+<p>With <code>K = 20</code>, the first 20 blocks have a 100% chance of being verified.
+* block 21 has a 95% chance
+* block 25 has an 80% chance
+* block 50 has a 40% chance
+* block 80 has a 25% chance</p>
+<p>The distribution of likelyhood of verifying a block is shown by this chart:
+<img alt="packetcrypt_verification_chance" src="packetcrypt_verification_chance.png" /></p></div>
+    
+    
+  </div>
+
+  
+  <footer class="footer">
+    
+    
+    <div class="container-footer">
+      <div class="footer__wrap">
+		<a href="https://pkt.cash" class="footer__logo">
+          <img src="../img/logo-footer.svg" alt="">
+        </a>
+        <div class="footer__links">
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Quicklinks</h4>
+            <a href="https://pkt.cash/cash" class="footer__links-link">PKT</a>
+            <a href="https://pkt.cash/mining" class="footer__links-link">Mining</a>
+            <a href="https://pkt.cash/network-steward" class="footer__links-link">Network Steward</a>
+            <a href="https://pkt.cash/roadmap" class="footer__links-link">Roadmap</a>
+            <a href="https://pkt.cash/community" class="footer__links-link">Community</a>
+            <a href="https://pkt.cash/about" class="footer__links-link">About</a>
+          </div>
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Github</h4>
+            <a href="https://github.com/pkt-cash/" class="footer__links-link">ptk.cash</a>
+            <a href="https://github.com/cjdelisle/cjdns" class="footer__links-link">cjdns</a>
+            <a href="https://github.com/cjdelisle/PacketCrypt" class="footer__links-link">PacketCrypt</a>
+          </div>
+        </div>
+        <div class="footer__social footer__links-one">
+          <h4 class="footer__social-title">Join the community</h4>
+          <a href="https://t.me/pktproject" class="footer__social-link">
+            <img src="../img/icon/telegram.svg" alt="" class="footer__social-img">
+            Telegram
+          </a>
+          <a href="https://matrix.to/#/#pkt:matrix.org" class="footer__social-link">
+            <img src="../img/icon/matrix.svg" alt="" class="footer__social-img">
+            Matrix
+          </a>
+          <!-- <a href="#" class="footer__social-link">
+                  <img src="img/icon/instagram.svg" alt="" class="footer__social-img">
+                  Instagram
+                </a>
+                <a href="#" class="footer__social-link">
+                  <img src="img/icon/facebook.svg" alt="" class="footer__social-img footer__social-img--facebook">
+                  Facebook
+                </a> -->
+        </div>
+        <div class="footer__copy">
+          @ PKT 2021
+        </div>
+      </div>
+    </div>
+    
+    
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <script>var base_url = ".."</script>
+  
+  <script src="../js/base.js"></script>
+  <script src="../search/main.js"></script>
+
+  <div
+  class="modal"
+  id="mkdocs_search_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="searchModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              id="mkdocs-search-query"
+              title="Type search term here"
+            />
+          </div>
+        </form>
+        <!-- <h4 class="modal-title" id="searchModalLabel">Search</h4> -->
+      </div>
+      <div class="modal-body">
+        <div id="mkdocs-search-results"></div>
+      </div>
+    </div>
+  </div>
+</div><div
+  class="modal"
+  id="mkdocs_keyboard_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="keyboardModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span
+          ><span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 20%">Keys</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="help shortcut"><kbd>?</kbd></td>
+              <td>Open this help</td>
+            </tr>
+            <tr>
+              <td class="next shortcut"><kbd>n</kbd></td>
+              <td>Next page</td>
+            </tr>
+            <tr>
+              <td class="prev shortcut"><kbd>p</kbd></td>
+              <td>Previous page</td>
+            </tr>
+            <tr>
+              <td class="search shortcut"><kbd>s</kbd></td>
+              <td>Search</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+  </body>
+
+</html>

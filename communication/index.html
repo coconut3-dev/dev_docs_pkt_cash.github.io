@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Dev environment">
+  
+  <meta name="author" content="Coconut3">
+  
+  <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/communication/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <title>Communication - PKT Documentation</title>
+  
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+  <link href='https://rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
+    rel='stylesheet' type='text/css'>
+  <link href="../css/bootstrap-custom.css" rel="stylesheet">
+  <link href="../css/base.css" rel="stylesheet">
+  <link href="../css/pkt.css" rel="stylesheet">
+
+  
+  
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+  
+  
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+   
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="c-navigation__top">
+      <div class="container-header flex_display">
+        <div class="c-navigation__top_links flex_display">
+          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="c-navigation__top_links__link c-navigation__top_links__link__deck">Deck</a>
+          <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" id="en" class="c-navigation__top_links__link_whitepaper">Whitepaper</a> 
+          <a href="https://docs.pkt.cash" target="_blank" class="c-navigation__top_links__link">Docs</a> 
+          <div class="c-navigation__top_links_social">
+            <a href="https://discord.gg/pktcash" target="_blank" title="Discord" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-discord.svg" alt="Discord" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://twitter.com/pktcash" target="_blank" title="Twitter" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-twitter.svg" alt="Twitter" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://pkt.chat/" target="_blank" title="PKT Chat" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-pktchat.svg" alt="PKT Chat" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://www.instagram.com/pktcash/" target="_blank" title="Instagram" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-instagram.svg" alt="Instagram" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://www.youtube.com/c/PKTCash/" target="_blank" title="Youtube" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-youtube.svg" alt="Youtube" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div> 
+          <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-header flex_display">
+        <a href="https://pkt.cash/" class="header__logo">
+            <img src="../img/logo-new.svg" alt="PKT Blog">
+        </a>
+        <nav class="header__nav">
+            <ul class="flex_display">
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/utility">Utility</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/build">Build</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/mine">Mine</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/tech">Technology</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/resources">Community</a></li>
+                <li class="menu-item sub-menu-parent">
+                    <a class="header__nav-link dropdown">Resources <svg width="12" height="12" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" xml:space="preserve" fill="#fff" style="enable-background:new 0 0 284.929 284.929"><g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                    L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"></path></g></svg></a>
+                 <ul class="sub-menu">
+                	<li class="menu-item" tab-index="0"><a class="header__nav-link" href="https://pkt.cash/origin-story">PKT Origin Story</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/letter">Letter from CJD</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/cryptoeconomics">Cryptoeconomics</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/network-steward">Network Steward</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/ecosystem">Ecosystem</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/pkt">PKT Cash</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/wallet">Wallet</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/getpkt">Get PKT</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/wpkt">WPKT</a></li>
+                 </ul></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://crypto.pkt.cash/">Blog</a></li>
+            </ul>
+            <div class="header__nav_mobile">
+                <div class="header__nav_mobile_social flex_display">
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://discord.gg/pktcash" target="_blank" title="Discord" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-discord.svg" alt="Discord" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://twitter.com/pktcash" target="_blank" title="Twitter" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-twitter.svg" alt="Twitter" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://pkt.chat/" target="_blank" title="PKT Chat" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-pktchat.svg" alt="PKT Chat" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://www.instagram.com/pktcash/" target="_blank" title="Instagram" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-instagram.svg" alt="Instagram" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://www.youtube.com/c/PKTCash/" target="_blank" title="Youtube" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-youtube.svg" alt="Youtube" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                </div>
+                <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+            </div>
+        </nav>
+        <div id="toggle_nav" class="header__nav__burger"></div>
+    </div>
+  </header>
+
+  
+<section class="posts">
+  <div class="container">
+    <div class="post__category-wrap">
+      <ul class="posts__category">
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="..">Home</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../electrum/">PKT Electrum</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../mining/">Mining</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../mining/pool_setup_guide/">Pool Operation</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/">Pktd</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/pktwallet/">PKTWallet</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../wrapped_pkt/">Wrapped PKT</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/migrating_from_electrum/">Electrum Import</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../PKT_FAQ/">FAQ</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../code_of_conduct/">Code of Conduct</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../commercial/">Commercial</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../useful_tools/">Useful Tools</a>
+        </li>
+        
+        <li
+          class="posts__category-item  active"
+        >
+          <a href="./">Communication</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+    
+    
+    <div class="col-md-3 sidebar-wrapper"><div class="bs-sidebar hidden-print affix well" role="complementary">
+  <ul class="nav bs-sidenav">
+    <li class="first-level active">
+      <a href="#ethical-communication-guidelines">Ethical Communication Guidelines</a>
+    </li>
+    <li class="second-level">
+      <a href="#a-far-higher-standard">A Far Higher Standard</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#principle-of-no-expected-return">Principle of No Expected Return</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#guidelines">Guidelines</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#examples-to-avoid">Examples to Avoid</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#better-examples">Better Examples</a>
+    </li>
+    
+  </ul>
+</div></div>
+    <div class="col-md-9" role="main"> <h1 id="ethical-communication-guidelines">Ethical Communication Guidelines<a class="headerlink" href="#ethical-communication-guidelines" title="Permanent link">&para;</a></h1>
+<p>This is a guideline for ethical communications about the project. It is recognized that to accomplish the goals, it is imperative that there is a community who understands and uses the technology, so communication cannot be avoided. However, poor communication, even made with the best intentions, risks harming the reputation of the project and the general public. So these guidelines exist to help community members represent the project in the best way possible.</p>
+<h2 id="a-far-higher-standard">A Far Higher Standard<a class="headerlink" href="#a-far-higher-standard" title="Permanent link">&para;</a></h2>
+<p>Within the cryptocurrency ecosystem, there are a significant number of outright criminal activities. Beyond those there is a wide grey area of communication activities which have not been subject to any regulatory enforcement, but still fall far outside of what these guidelines establish as ethical. </p>
+<p>Community members are cautioned that due to the scale of these "grey" activities, there is a large body of publications, influencers, marketers, "shills" and other professionals who, if consulted or emulated, are highly likely to put a person in ethical peril, because these guidelines establish a far higher standard of communication ethics than that which is generally considered to be legal.</p>
+<h2 id="principle-of-no-expected-return">Principle of No Expected Return<a class="headerlink" href="#principle-of-no-expected-return" title="Permanent link">&para;</a></h2>
+<p>It is acknowledged that buying, selling and mining are central aspects of cryptocurrency use, so it is difficult to effectively communicate about the project without ever addressing reasons why a person might do these things. Therefore these guidelines offer a pre-approved narrative which is considered to be maximally protective of the reputation of the project while also providing a healthy perspective regarding the risks associated with cryptocurrency.</p>
+<p>The Principle of No Expected Return is that one should buy or mine a cryptocurrency if and only if they believe strongly enough in the vision of the project that they would be proud to own the coin even if they were never able to sell it. In the early days of Bitcoin, it was widely believed that it would be legislated out of existence or otherwise collapse, and so this principle was pervasive throughout the community. Many people chose to hold Bitcoin as a political statement regarding the morality of modern financial institutions, especially after the 2008 financial crisis.</p>
+<p>The key components of the Principle of No Expected Return are:
+* A clear understanding of what the technology is and what it is not.
+* A belief in the social change which that technology can realistically facilitate.
+* The mental and financial preparedness to lose any money or effort that is used to acquire the coin, as one has when one makes a donation.</p>
+<p>When you’re considering buying a coin, you need to ask yourself: If you were to lose everything you put into a coin, would you look back on the day you bought it, proud to have been a part of the project at that time? If the answer is no, then you’re either planning to buy too much, or you’re just not ready.</p>
+<h2 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permanent link">&para;</a></h2>
+<p>Dishonest, intentionally misleading, or otherwise unlawful communication is obviously unethical, but beyond that there is no clear definition for unethical communication, though one could characterise it in the words of Justice Stewart, "I know it when I see it". These non-exhaustive guidelines exist to give community members an understanding of the types of communication which are most likely to be unethical. They are listed in order of importance with the most important first.</p>
+<ol>
+<li>Communications which follow the letter, but not the spirit, of these guidelines are unethical. One example of this is token disclaimers such as "this is not financial advice". Disclaimers can be useful for helping a person understand the limitations and caveats of a communication, but a token disclaimer exists more to make the communicator seem innocent than to help the audience have a clearer understanding. The use of fine print, or disclaimers which "feel out of place" in the overall communication should be regarded as red flags, and communicators using these should review the objectives of their message and whether it is being communicated clearly.</li>
+<li>Communications which a person of sound judgement could plausibly interpret as presenting a <em>low risk low effort opportunity to make money</em>, or “something for nothing”, are unethical. Presenting an opportunity can take many forms including implication though specific selection of facts, or an over-celebratory tone. Generally speaking, communications should be explicit about their objective so that there is minimal chance of mis-interpretation.</li>
+<li>Communications which a person suffering impaired judgement has an <em>unusually high likelihood</em> of interpreting as a low risk low effort opportunity to make money are unethical. Topics like “winning”, “pump”, “FOMO”, “YOLO” (spend all of your money), “moon”, and the idea of being rich, may strike the average person as nothing more than a bit of low-culture humour, but for a pathological gambler these can trigger a harmful thought process and should be avoided.</li>
+<li>Communications related to investment and trading of the coin should be addressed to investors and traders — professionals who know how hard it is to reliably beat the market and who make decisions based on their own unique portfolio and risk management strategy. Any kind of communication around these topics which has a celebratory tone, or which could reasonably be interpreted as investment advice is not ethical.</li>
+<li>Communications which focus entirely on explaining a piece of technology, without any mention or implication of buying, selling, price, or potential future growth (including growth in usage of the technology), are probably ethical.</li>
+<li>Communications which address the topic of buying, selling or mining, but are specifically focused on the Principle of No Expected Return, are probably ethical.</li>
+</ol>
+<h2 id="examples-to-avoid">Examples to Avoid<a class="headerlink" href="#examples-to-avoid" title="Permanent link">&para;</a></h2>
+<p>These passages are examples of the type of communication which is likely to be problematic. Context is key, and in the context of a communication which clearly transmits an ethical core message, a passing mention of money probably does not make the whole communication unethical. But if the core message is not communicated with adequate clarity, then even the slightest mention of topics like the following may make the communication unethical.</p>
+<ul>
+<li>"price has grown by 50% over the past 3 months"</li>
+<li>"George has made $700 mining with his old computer"</li>
+<li>"reaping the rewards for something you put zero effort in!""</li>
+<li>"build a fund for rainy days"</li>
+<li>"earning passive income at any time of day, even when sleeping"</li>
+<li>"early adopters have the most to gain"</li>
+<li>"miners who accumulate the coin are rewarded whenever there is significant price appreciation"</li>
+<li>"so many people trust cryptocurrency investment"</li>
+<li>"gain financially by facilitating connectivity"</li>
+</ul>
+<p>While some of these statements may be factual, they share a common narrative that there is an opportunity, it is easy, and it leads to making money. This is a stark contrast from the Principle of No Expected Return.</p>
+<h2 id="better-examples">Better Examples<a class="headerlink" href="#better-examples" title="Permanent link">&para;</a></h2>
+<p>Honest communications addressing topics like the following are more likely to be ethical.</p>
+<ul>
+<li>"price has been on the rise, but this can be affected by current events outside the project, so core community members are more focused on continuous progress toward the goal"</li>
+<li>"'I pay for my internet, so I might as well use it"', said George who has been mining with his old computer"</li>
+<li>"we all know internet is over-priced, but now there is a community of people trying to do something about it"</li>
+<li>"'I know cryptocurrencies are risky, and tomorrow it could all be worth nothing, but I'm spending money I can afford on a something I believe in' said Tom, who recently bought coins"</li>
+<li>"the control that big telecoms have over our everyday lives can make people feel powerless, but now there’s an easy way to push back"</li>
+<li>"sometimes the price goes up and sometimes it goes down. Being part of the community is about believing that democratised internet is possible"</li>
+</ul></div>
+    
+    
+  </div>
+
+  
+  <footer class="footer">
+    
+    
+    <div class="container-footer">
+      <div class="footer__wrap">
+		<a href="https://pkt.cash" class="footer__logo">
+          <img src="../img/logo-footer.svg" alt="">
+        </a>
+        <div class="footer__links">
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Quicklinks</h4>
+            <a href="https://pkt.cash/cash" class="footer__links-link">PKT</a>
+            <a href="https://pkt.cash/mining" class="footer__links-link">Mining</a>
+            <a href="https://pkt.cash/network-steward" class="footer__links-link">Network Steward</a>
+            <a href="https://pkt.cash/roadmap" class="footer__links-link">Roadmap</a>
+            <a href="https://pkt.cash/community" class="footer__links-link">Community</a>
+            <a href="https://pkt.cash/about" class="footer__links-link">About</a>
+          </div>
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Github</h4>
+            <a href="https://github.com/pkt-cash/" class="footer__links-link">ptk.cash</a>
+            <a href="https://github.com/cjdelisle/cjdns" class="footer__links-link">cjdns</a>
+            <a href="https://github.com/cjdelisle/PacketCrypt" class="footer__links-link">PacketCrypt</a>
+          </div>
+        </div>
+        <div class="footer__social footer__links-one">
+          <h4 class="footer__social-title">Join the community</h4>
+          <a href="https://t.me/pktproject" class="footer__social-link">
+            <img src="../img/icon/telegram.svg" alt="" class="footer__social-img">
+            Telegram
+          </a>
+          <a href="https://matrix.to/#/#pkt:matrix.org" class="footer__social-link">
+            <img src="../img/icon/matrix.svg" alt="" class="footer__social-img">
+            Matrix
+          </a>
+          <!-- <a href="#" class="footer__social-link">
+                  <img src="img/icon/instagram.svg" alt="" class="footer__social-img">
+                  Instagram
+                </a>
+                <a href="#" class="footer__social-link">
+                  <img src="img/icon/facebook.svg" alt="" class="footer__social-img footer__social-img--facebook">
+                  Facebook
+                </a> -->
+        </div>
+        <div class="footer__copy">
+          @ PKT 2021
+        </div>
+      </div>
+    </div>
+    
+    
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <script>var base_url = ".."</script>
+  
+  <script src="../js/base.js"></script>
+  <script src="../search/main.js"></script>
+
+  <div
+  class="modal"
+  id="mkdocs_search_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="searchModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              id="mkdocs-search-query"
+              title="Type search term here"
+            />
+          </div>
+        </form>
+        <!-- <h4 class="modal-title" id="searchModalLabel">Search</h4> -->
+      </div>
+      <div class="modal-body">
+        <div id="mkdocs-search-results"></div>
+      </div>
+    </div>
+  </div>
+</div><div
+  class="modal"
+  id="mkdocs_keyboard_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="keyboardModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span
+          ><span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 20%">Keys</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="help shortcut"><kbd>?</kbd></td>
+              <td>Open this help</td>
+            </tr>
+            <tr>
+              <td class="next shortcut"><kbd>n</kbd></td>
+              <td>Next page</td>
+            </tr>
+            <tr>
+              <td class="prev shortcut"><kbd>p</kbd></td>
+              <td>Previous page</td>
+            </tr>
+            <tr>
+              <td class="search shortcut"><kbd>s</kbd></td>
+              <td>Search</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+  </body>
+
+</html>

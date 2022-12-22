@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Dev environment">
+  
+  <meta name="author" content="Coconut3">
+  
+  <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/PKT_FAQ/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <title>FAQ - PKT Documentation</title>
+  
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+  <link href='https://rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
+    rel='stylesheet' type='text/css'>
+  <link href="../css/bootstrap-custom.css" rel="stylesheet">
+  <link href="../css/base.css" rel="stylesheet">
+  <link href="../css/pkt.css" rel="stylesheet">
+
+  
+  
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+  
+  
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+   
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="c-navigation__top">
+      <div class="container-header flex_display">
+        <div class="c-navigation__top_links flex_display">
+          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank" class="c-navigation__top_links__link c-navigation__top_links__link__deck">Deck</a>
+          <a href="/PKT_Network_v1.0_2021.02.01.pdf" target="_blank" id="en" class="c-navigation__top_links__link_whitepaper">Whitepaper</a> 
+          <a href="https://docs.pkt.cash" target="_blank" class="c-navigation__top_links__link">Docs</a> 
+          <div class="c-navigation__top_links_social">
+            <a href="https://discord.gg/pktcash" target="_blank" title="Discord" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-discord.svg" alt="Discord" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://twitter.com/pktcash" target="_blank" title="Twitter" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-twitter.svg" alt="Twitter" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://pkt.chat/" target="_blank" title="PKT Chat" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-pktchat.svg" alt="PKT Chat" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://www.instagram.com/pktcash/" target="_blank" title="Instagram" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-instagram.svg" alt="Instagram" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div>
+          <div class="c-navigation__top_links_social">
+            <a href="https://www.youtube.com/c/PKTCash/" target="_blank" title="Youtube" class="c-navigation__top_links_social__item">
+              <img src="../img/header-social-youtube.svg" alt="Youtube" class="c-navigation__top_links_social__item_icon">
+            </a>
+          </div> 
+          <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-header flex_display">
+        <a href="https://pkt.cash/" class="header__logo">
+            <img src="../img/logo-new.svg" alt="PKT Blog">
+        </a>
+        <nav class="header__nav">
+            <ul class="flex_display">
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/utility">Utility</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/build">Build</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/mine">Mine</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/tech">Technology</a></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/resources">Community</a></li>
+                <li class="menu-item sub-menu-parent">
+                    <a class="header__nav-link dropdown">Resources <svg width="12" height="12" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" xml:space="preserve" fill="#fff" style="enable-background:new 0 0 284.929 284.929"><g><path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                    L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"></path></g></svg></a>
+                 <ul class="sub-menu">
+                	<li class="menu-item" tab-index="0"><a class="header__nav-link" href="https://pkt.cash/origin-story">PKT Origin Story</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/letter">Letter from CJD</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/cryptoeconomics">Cryptoeconomics</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/network-steward">Network Steward</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/ecosystem">Ecosystem</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/pkt">PKT Cash</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/wallet">Wallet</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/getpkt">Get PKT</a></li>
+                	<li class="menu-item"><a class="header__nav-link" href="https://pkt.cash/wpkt">WPKT</a></li>
+                 </ul></li>
+                <li class="menu-item"><a class="header__nav-link" href="https://crypto.pkt.cash/">Blog</a></li>
+            </ul>
+            <div class="header__nav_mobile">
+                <div class="header__nav_mobile_social flex_display">
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://discord.gg/pktcash" target="_blank" title="Discord" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-discord.svg" alt="Discord" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://twitter.com/pktcash" target="_blank" title="Twitter" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-twitter.svg" alt="Twitter" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://pkt.chat/" target="_blank" title="PKT Chat" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-pktchat.svg" alt="PKT Chat" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://www.instagram.com/pktcash/" target="_blank" title="Instagram" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-instagram.svg" alt="Instagram" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                  <div class="c-navigation__top_links_social">
+                    <a href="https://www.youtube.com/c/PKTCash/" target="_blank" title="Youtube" class="c-navigation__top_links_social__item">
+                      <img src="../img/header-social-youtube.svg" alt="Youtube" class="c-navigation__top_links_social__item_icon">
+                    </a>
+                  </div>
+                </div>
+                <a href="https://explorer.pkt.cash" target="_blank" class="c-navigation__top_links__link_border">Explorer</a>
+            </div>
+        </nav>
+        <div id="toggle_nav" class="header__nav__burger"></div>
+    </div>
+  </header>
+
+  
+<section class="posts">
+  <div class="container">
+    <div class="post__category-wrap">
+      <ul class="posts__category">
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="..">Home</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../electrum/">PKT Electrum</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../mining/">Mining</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../mining/pool_setup_guide/">Pool Operation</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/">Pktd</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/pktwallet/">PKTWallet</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../wrapped_pkt/">Wrapped PKT</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../pktd/migrating_from_electrum/">Electrum Import</a>
+        </li>
+        
+        <li
+          class="posts__category-item  active"
+        >
+          <a href="./">FAQ</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../code_of_conduct/">Code of Conduct</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../commercial/">Commercial</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../useful_tools/">Useful Tools</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
+          <a href="../communication/">Communication</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+    
+    
+    <div class="col-md-3 sidebar-wrapper"><div class="bs-sidebar hidden-print affix well" role="complementary">
+  <ul class="nav bs-sidenav">
+    <li class="first-level active">
+      <a href="#pkt-faq">PKT FAQ</a>
+    </li>
+    <li class="second-level">
+      <a href="#general">General</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#what-is-pkt">What is PKT?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-is-pkt-cash">What is PKT Cash?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-wallets-are-available">What wallets are available?</a>
+    </li>
+    <li class="third-level">
+      <a href="#where-can-i-buy-or-sell-pkt">Where can I buy or sell PKT?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-is-the-path-towards-being-publicly-listed-on-exchanges">What is the path towards being publicly listed on exchanges?</a>
+    </li>
+    <li class="third-level">
+      <a href="#the-differentiating-factors-vs-bitcoin-and-other-crypto-coins">The differentiating factors vs. Bitcoin and other crypto coins?</a>
+    </li>
+    <li class="second-level">
+      <a href="#vision">Vision</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#what-is-value-proposition-of-pkt">What is value proposition of PKT?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-is-a-cloud-isp">What is a Cloud ISP?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-do-you-see-as-the-greatest-challenge-to-pkts-long-term-success">What do you see as the greatest challenge to PKTs long-term success?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-are-the-applications-and-software-currently-being-explored">What are the applications and software currently being explored?</a>
+    </li>
+    <li class="second-level">
+      <a href="#mining">Mining</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#how-is-pkt-mined">How is PKT mined?</a>
+    </li>
+    <li class="third-level">
+      <a href="#how-will-the-growth-in-mining-impact-the-coin">How will the growth in mining impact the coin?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-wallet-do-i-use-for-mining">What wallet do I use for mining?</a>
+    </li>
+    <li class="third-level">
+      <a href="#is-there-an-easy-way-to-start-mining">Is there an easy way to start mining?</a>
+    </li>
+    <li class="third-level">
+      <a href="#do-miners-mining-on-a-single-pool-have-any-benefit-over-miners-mining-on-multi-pool">Do miners mining on a single pool have any benefit over miners mining on multi pool?</a>
+    </li>
+    <li class="second-level">
+      <a href="#network-steward">Network Steward</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#what-is-the-network-steward">What is the Network Steward?</a>
+    </li>
+    <li class="third-level">
+      <a href="#who-is-the-network-steward-currently">Who is the Network Steward currently?</a>
+    </li>
+    <li class="third-level">
+      <a href="#how-is-the-current-network-steward-using-the-funds">How is the (current) Network Steward using the funds?</a>
+    </li>
+    <li class="third-level">
+      <a href="#has-the-network-steward-burned-any-funds">Has the Network Steward burned any funds?</a>
+    </li>
+    <li class="third-level">
+      <a href="#how-do-i-submit-a-proposal">How do I submit a proposal?</a>
+    </li>
+    <li class="second-level">
+      <a href="#dilligence">Dilligence</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#who-is-the-creator-is-he-actively-involved-whats-his-ownership">Who is the creator? Is he actively involved? What's his ownership?</a>
+    </li>
+    <li class="third-level">
+      <a href="#who-stands-to-benefit-the-most-from-growth-and-adaption">Who stands to benefit the most from growth and adaption?</a>
+    </li>
+    <li class="third-level">
+      <a href="#are-there-any-regulatory-or-compliance-liabilities">Are there any regulatory or compliance liabilities?</a>
+    </li>
+    <li class="third-level">
+      <a href="#what-legal-disclosures-need-to-made-with-investments-into-this-or-are-there-none">What legal disclosures need to made with investments into this? Or are there none?</a>
+    </li>
+    <li class="second-level">
+      <a href="#communication">Communication</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#has-any-branding-or-marketing-already-been-completed">Has any branding or marketing already been completed?</a>
+    </li>
+    <li class="third-level">
+      <a href="#are-any-brand-ambassadors-already-engaged">Are any brand ambassadors already engaged?</a>
+    </li>
+    <li class="second-level">
+      <a href="#commercial">Commercial</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#how-can-i-contact-the-pkt-team">How can I contact the PKT Team</a>
+    </li>
+    <li class="third-level">
+      <a href="#can-i-build-x-with-pkt">Can I build X with PKT?</a>
+    </li>
+  </ul>
+</div></div>
+    <div class="col-md-9" role="main"> <h1 id="pkt-faq">PKT FAQ<a class="headerlink" href="#pkt-faq" title="Permanent link">&para;</a></h1>
+<p>This is a community defined FAQ, <a href="https://github.com/pkt-cash/pkt-docs/edit/main/docs/PKT_FAQ.md">edit this page</a> to improve it.</p>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-pkt">What is PKT?<a class="headerlink" href="#what-is-pkt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT allows users to monetize their unused internet bandwidth. By participating in the PKT Network you are helping to build a faster, stronger, and more secure, decentralized network.</p>
+</blockquote>
+<h3 id="what-is-pkt-cash">What is PKT Cash?<a class="headerlink" href="#what-is-pkt-cash" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT is a native mined coin based on an open source project. There are multiple companies in the PKT ecosystem but no company "behind PKT."</p>
+</blockquote>
+<h3 id="what-wallets-are-available">What wallets are available?<a class="headerlink" href="#what-wallets-are-available" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>If you're not mining, the best wallet is <a href="https://docs.pkt.cash/en/latest/electrum/">PKT Electrum</a>, which was developed as part of a Network Steward funded project and supports Windows, Mac and Linux. However, <strong>mining into electrum will break it</strong> and if you do it, you will need to <a href="https://docs.pkt.cash/en/latest/pktd/migrating_from_electrum/">export your keys</a> to recover funds.</li>
+<li>If you use Microsoft Windows, the best wallet to use is <a href="https://www.pkt.world/wallet">PKT.world wallet</a></li>
+<li>If you use Mac and want to mine, you can use <a href="https://github.com/artrepreneur/Zulu">Zulu Wallet</a></li>
+<li>If you are using a server, you can use the <a href="https://docs.pkt.cash/en/latest/pktd/pktwallet/">CLI wallet</a> which is the base code for the PKT.world wallet and Zulu wallet.</li>
+<li>There is an ongoing wallet called MatterFi which is based on the powerful OpenTransactions technology. You are invited to help beta-test this wallet in <a href="https://pkt.chat/pkt/channels/matterfi">#matterfi</a> on pkt.chat.</li>
+</ul>
+</blockquote>
+<h3 id="where-can-i-buy-or-sell-pkt">Where can I buy or sell PKT?<a class="headerlink" href="#where-can-i-buy-or-sell-pkt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Currently there are two ways to buy and sell, you can buy <a href="https://coinmarketcap.com/currencies/wrapped-pkt/">wrapped PKT</a> on pancakeswap and then un-wrap it using the <a href="https://odapp.io/">ODAPP</a> (NOTE: in order to use wrapped PKT, you will need <a href="https://www.binance.org/en/smartChain">Binance Smart Chain BNB</a> to pay gas fees. Also note that ODAPP charges 3.5% when wrapping or unwrapping)</p>
+<p>If you would like a more human experience of buying or selling, you can come to <a href="https://t.me/joinchat/VTzmffhbXP0mrd9-">ye ol' telegram chat</a> where PKT has been traded since the beginning. Remember that telegram is a place where scammers lurk, so always read and follow the guidelines and always use escrow, <em>even</em> after you have traded with somebody multiple times.</p>
+</blockquote>
+<h3 id="what-is-the-path-towards-being-publicly-listed-on-exchanges">What is the path towards being publicly listed on exchanges?<a class="headerlink" href="#what-is-the-path-towards-being-publicly-listed-on-exchanges" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT is a decentralized project like Bitcoin, not a centralized token. Community members are having conversations with different exchanges and you can do it too. There are no more details at this time about the particular listing initiatives.</p>
+</blockquote>
+<h3 id="the-differentiating-factors-vs-bitcoin-and-other-crypto-coins">The differentiating factors vs. Bitcoin and other crypto coins?<a class="headerlink" href="#the-differentiating-factors-vs-bitcoin-and-other-crypto-coins" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The differences from Bitcoin are: 
+PacketCrypt bandwidth hard proof of work replaces SHA-256
+1 minute block time
+6 billion coins total
+Mining yields decrease 10% every 100 days in what is called the decimation
+20% of each mined block goes to the Network Steward wallet, which funds R&amp;D of the ecosystem</p>
+</blockquote>
+<h2 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-value-proposition-of-pkt">What is value proposition of PKT?<a class="headerlink" href="#what-is-value-proposition-of-pkt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The PKT project is focused on building a decentralized bandwidth marketplace to decouple the business and technical aspects of internet service from the physical aspect of maintaining infrastructure. The fundamental value is division of labor and lowering the barrier of entry for internet service competition.</p>
+</blockquote>
+<h3 id="what-is-a-cloud-isp">What is a Cloud ISP?<a class="headerlink" href="#what-is-a-cloud-isp" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>There is <a href="https://twitter.com/pkt_cash/status/1374050101094617091?s=21">an explanation video</a> about Cloud ISPs on Twitter. The role of a Cloud ISP is to perform the technical and administrative aspects of internet service so that the aspects of infrastructure operation can be done by individuals, small businesses and community groups.</p>
+</blockquote>
+<h3 id="what-do-you-see-as-the-greatest-challenge-to-pkts-long-term-success">What do you see as the greatest challenge to PKTs long-term success?<a class="headerlink" href="#what-do-you-see-as-the-greatest-challenge-to-pkts-long-term-success" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Historically, crypto projects achieve the best results when they are focused on use cases and utility. PKT is focusing on building a decentralized bandwidth marketplace where people can earn PKT with their internet and use PKT to pay for connectivity. The greatest challenge is getting the next billion people connected to the internet.</p>
+</blockquote>
+<h3 id="what-are-the-applications-and-software-currently-being-explored">What are the applications and software currently being explored?<a class="headerlink" href="#what-are-the-applications-and-software-currently-being-explored" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>A free to use VPN service called AnodeVPN will be launched in 2021, and users can pay for their VPN speed with PKT Cash. Internet bandwidth sharing and mesh networking are also currently in the stages of development. </p>
+</blockquote>
+<h2 id="mining">Mining<a class="headerlink" href="#mining" title="Permanent link">&para;</a></h2>
+<h3 id="how-is-pkt-mined">How is PKT mined?<a class="headerlink" href="#how-is-pkt-mined" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT is mined using the novel PacketCrypt bandwidth-hard mining algorithm which requires bandwidth to mine. It uses a combination of CPU and bandwidth, you get an advantage by working together with other miners which requires bandwidth.</p>
+</blockquote>
+<h3 id="how-will-the-growth-in-mining-impact-the-coin">How will the growth in mining impact the coin?<a class="headerlink" href="#how-will-the-growth-in-mining-impact-the-coin" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>As more people mine PacketCrypt, they will need to invest in more network infrastructure which will become useful later on for making the internet faster and more accessible.</p>
+</blockquote>
+<h3 id="what-wallet-do-i-use-for-mining">What wallet do I use for mining?<a class="headerlink" href="#what-wallet-do-i-use-for-mining" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>For mining it's recommended to use the command line <a href="https://docs.pkt.cash/en/latest/pktd/pktwallet/">PKTWallet</a> due to the amount of mining transactions and it's ability to scale. If you use a Mac then you can also use the <a href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases">PKT-Cash-Wallet</a> for MacOS.</p>
+</blockquote>
+<h3 id="is-there-an-easy-way-to-start-mining">Is there an easy way to start mining?<a class="headerlink" href="#is-there-an-easy-way-to-start-mining" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>There are <a href="https://docs.pkt.cash/en/latest/mining/">mining instructions</a> for mining on the PKT website. <a href="https://pktpal.com/">PktPal</a> is a business in the community which offers turn-key mining solutions.</p>
+</blockquote>
+<h3 id="do-miners-mining-on-a-single-pool-have-any-benefit-over-miners-mining-on-multi-pool">Do miners mining on a single pool have any benefit over miners mining on multi pool?<a class="headerlink" href="#do-miners-mining-on-a-single-pool-have-any-benefit-over-miners-mining-on-multi-pool" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Multi-pool mining means submitting the exact same announcements to multiple pools. So if you have the bandwidth available it will always benefit you to mine in all of the major pools.</p>
+</blockquote>
+<h2 id="network-steward">Network Steward<a class="headerlink" href="#network-steward" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-the-network-steward">What is the Network Steward?<a class="headerlink" href="#what-is-the-network-steward" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The Network Steward is part of the consensus rules of the PKT blockchain. 20% of every newly mined block goes to a wallet address and then those coins are 100% paid out in grants to help build open-source technology and develop the PKT Network. Network Steward funds must be deployed within 90 days or else they are  burned. This address was initially set to a multi-signature group, but it can be changed by a PoS based vote process.</p>
+</blockquote>
+<h3 id="who-is-the-network-steward-currently">Who is the Network Steward currently?<a class="headerlink" href="#who-is-the-network-steward-currently" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>A group of 5 volunteers including the original author of the code. More information can be found [here]: (https://pkt.cash/network-steward)</p>
+</blockquote>
+<h3 id="how-is-the-current-network-steward-using-the-funds">How is the (current) Network Steward using the funds?<a class="headerlink" href="#how-is-the-current-network-steward-using-the-funds" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The Network Steward follows a <a href="https://github.com/pkt-cash/ns-projects/">project evaluation process.</a><br />
+No funds have ever been deployed except to fund projects which were proposed by members of the public in an open competitive process. The Network Steward operates with full transparency. Every transaction made by the Network Steward can be seen in the block explorer and is refered to in the Network Steward's github repository explaining the project which that transaction helped to fund.   </p>
+</blockquote>
+<h3 id="has-the-network-steward-burned-any-funds">Has the Network Steward burned any funds?<a class="headerlink" href="#has-the-network-steward-burned-any-funds" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>You can check out the stats on burned coins in the block explorer <a href="https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2">Network Steward page</a>.</p>
+</blockquote>
+<h3 id="how-do-i-submit-a-proposal">How do I submit a proposal?<a class="headerlink" href="#how-do-i-submit-a-proposal" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>There are currently two ways to propose a project to the PKT Network Steward, if your project is large and has the benefit of accountants to be able to verify that the money has been spent appropriately, you can make a proposal directly to the NS through the NS github <a href="https://github.com/pkt-cash/ns-projects/">Network Steward's Github</a>. The NS opens calls from time to time with a specified budget and during these calls anyone can apply.
+If you want to propose a smaller project and have the accounting and official reporting managed for you, you can propose to the <a href="https://nlnet.nl/useroperated/">User Operated Internet</a> fund which is funded by the Network Steward but is administored by NLnet, a well respected public benefit organization which is experienced at managing these types of projects.</p>
+</blockquote>
+<h2 id="dilligence">Dilligence<a class="headerlink" href="#dilligence" title="Permanent link">&para;</a></h2>
+<h3 id="who-is-the-creator-is-he-actively-involved-whats-his-ownership">Who is the creator? Is he actively involved? What's his ownership?<a class="headerlink" href="#who-is-the-creator-is-he-actively-involved-whats-his-ownership" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT was created by Caleb James DeLisle, the creator of cjdns. Cjdns is the only decentralized mesh networking protocol which is designed to function in even if some of the nodes in the network are adversarial. Caleb has been mining PKT similarly to everybody else in the project.</p>
+</blockquote>
+<h3 id="who-stands-to-benefit-the-most-from-growth-and-adaption">Who stands to benefit the most from growth and adaption?<a class="headerlink" href="#who-stands-to-benefit-the-most-from-growth-and-adaption" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The early miners and adopters of PKT will benefit greatly. PKT also benefits everybody because it will lead to a lower cost and highly competitive internet service ecosystem.</p>
+</blockquote>
+<h3 id="are-there-any-regulatory-or-compliance-liabilities">Are there any regulatory or compliance liabilities?<a class="headerlink" href="#are-there-any-regulatory-or-compliance-liabilities" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT is a fully decentralized fork of Bitcoin, so it is similarly considered to be a commodity.</p>
+</blockquote>
+<h3 id="what-legal-disclosures-need-to-made-with-investments-into-this-or-are-there-none">What legal disclosures need to made with investments into this? Or are there none?<a class="headerlink" href="#what-legal-disclosures-need-to-made-with-investments-into-this-or-are-there-none" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Because PKT is a fully decentralized clone of the Bitcoin codebase, the legal and regulatory framing is probably similar.</p>
+</blockquote>
+<h2 id="communication">Communication<a class="headerlink" href="#communication" title="Permanent link">&para;</a></h2>
+<h3 id="has-any-branding-or-marketing-already-been-completed">Has any branding or marketing already been completed?<a class="headerlink" href="#has-any-branding-or-marketing-already-been-completed" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT is a decentralized project so there is no official brand for PKT, however the website pkt.cash, logos, and other materials were developed as part of a Network Steward funded project and are usable under the Creative Commons license.</p>
+</blockquote>
+<h3 id="are-any-brand-ambassadors-already-engaged">Are any brand ambassadors already engaged?<a class="headerlink" href="#are-any-brand-ambassadors-already-engaged" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PKT is not a centralized project so anybody can be an ambassador. There are a number of companies and initiatives which currently exist in the PKT ecosystem including AnodeVPN and Pkt Pal.</p>
+</blockquote>
+<h2 id="commercial">Commercial<a class="headerlink" href="#commercial" title="Permanent link">&para;</a></h2>
+<h3 id="how-can-i-contact-the-pkt-team">How can I contact the PKT Team<a class="headerlink" href="#how-can-i-contact-the-pkt-team" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>You <em>are</em> the PKT team, PKT is a fully decentralized project like Bitcoin, so everyone is the team. The bad news is there is no central authority who can write you a check, but the good news is there are a few businesses in the PKT ecosystem who might be prepared to buy your services. See <a href="https://docs.pkt.cash/en/latest/commercial/">PKT Commercial</a> for a (non-exhaustive) list.</p>
+</blockquote>
+<h3 id="can-i-build-x-with-pkt">Can I build X with PKT?<a class="headerlink" href="#can-i-build-x-with-pkt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>YES</em>, the PKT community encourages all types of (legal, responsible) business activity in the PKT ecosystem. The <a href="https://odapp.io/">ODAPP</a> bridge was created by a community member and was not in the original PKT vision but this bridge is now an important part of the infrastructure of the PKT ecosystem. You can also build your commercial venture and the we in the PKT community will do what we can to help you be successful.</p>
+</blockquote></div>
+    
+    
+  </div>
+
+  
+  <footer class="footer">
+    
+    
+    <div class="container-footer">
+      <div class="footer__wrap">
+		<a href="https://pkt.cash" class="footer__logo">
+          <img src="../img/logo-footer.svg" alt="">
+        </a>
+        <div class="footer__links">
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Quicklinks</h4>
+            <a href="https://pkt.cash/cash" class="footer__links-link">PKT</a>
+            <a href="https://pkt.cash/mining" class="footer__links-link">Mining</a>
+            <a href="https://pkt.cash/network-steward" class="footer__links-link">Network Steward</a>
+            <a href="https://pkt.cash/roadmap" class="footer__links-link">Roadmap</a>
+            <a href="https://pkt.cash/community" class="footer__links-link">Community</a>
+            <a href="https://pkt.cash/about" class="footer__links-link">About</a>
+          </div>
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Github</h4>
+            <a href="https://github.com/pkt-cash/" class="footer__links-link">ptk.cash</a>
+            <a href="https://github.com/cjdelisle/cjdns" class="footer__links-link">cjdns</a>
+            <a href="https://github.com/cjdelisle/PacketCrypt" class="footer__links-link">PacketCrypt</a>
+          </div>
+        </div>
+        <div class="footer__social footer__links-one">
+          <h4 class="footer__social-title">Join the community</h4>
+          <a href="https://t.me/pktproject" class="footer__social-link">
+            <img src="../img/icon/telegram.svg" alt="" class="footer__social-img">
+            Telegram
+          </a>
+          <a href="https://matrix.to/#/#pkt:matrix.org" class="footer__social-link">
+            <img src="../img/icon/matrix.svg" alt="" class="footer__social-img">
+            Matrix
+          </a>
+          <!-- <a href="#" class="footer__social-link">
+                  <img src="img/icon/instagram.svg" alt="" class="footer__social-img">
+                  Instagram
+                </a>
+                <a href="#" class="footer__social-link">
+                  <img src="img/icon/facebook.svg" alt="" class="footer__social-img footer__social-img--facebook">
+                  Facebook
+                </a> -->
+        </div>
+        <div class="footer__copy">
+          @ PKT 2021
+        </div>
+      </div>
+    </div>
+    
+    
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <script>var base_url = ".."</script>
+  
+  <script src="../js/base.js"></script>
+  <script src="../search/main.js"></script>
+
+  <div
+  class="modal"
+  id="mkdocs_search_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="searchModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              id="mkdocs-search-query"
+              title="Type search term here"
+            />
+          </div>
+        </form>
+        <!-- <h4 class="modal-title" id="searchModalLabel">Search</h4> -->
+      </div>
+      <div class="modal-body">
+        <div id="mkdocs-search-results"></div>
+      </div>
+    </div>
+  </div>
+</div><div
+  class="modal"
+  id="mkdocs_keyboard_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="keyboardModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span
+          ><span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 20%">Keys</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="help shortcut"><kbd>?</kbd></td>
+              <td>Open this help</td>
+            </tr>
+            <tr>
+              <td class="next shortcut"><kbd>n</kbd></td>
+              <td>Next page</td>
+            </tr>
+            <tr>
+              <td class="prev shortcut"><kbd>p</kbd></td>
+              <td>Previous page</td>
+            </tr>
+            <tr>
+              <td class="search shortcut"><kbd>s</kbd></td>
+              <td>Search</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+  </body>
+
+</html>
