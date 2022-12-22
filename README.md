@@ -1,0 +1,1 @@
+Mkdocs can auto generate docs website into static files. To do that you need to run - ``mkdocs build`` command on your server and Mkdocs will generate ``site`` folder with all static files. When files will be generated you need to point your server to Mkdocs folder where ``site`` folder was generated. Root file is - ``index.html``.
