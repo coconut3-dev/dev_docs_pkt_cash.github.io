@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <meta name="description" content="Dev environment">
   
-  <meta name="author" content="PKT">
+  <meta name="author" content="Coconut3">
   
-  <link rel="canonical" href="https://docs.pkt.cash/mining/">
+  <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/mining/">
   <link rel="shortcut icon" href="../img/favicon.ico">
 
   
@@ -190,6 +191,12 @@
         <li
           class="posts__category-item "
         >
+          <a href="../wrapped_pkt/">Wrapped PKT</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
           <a href="../pktd/migrating_from_electrum/">Electrum Import</a>
         </li>
         
@@ -241,17 +248,27 @@
     </li>
     
     <li class="third-level">
-      <a href="#installing-from-source">Installing from source</a>
+      <a href="#1-install-a-pre-built-binary">1. Install a Pre-built Binary</a>
     </li>
     <li class="third-level">
-      <a href="#deploying-a-docker-image">Deploying a Docker Image</a>
+      <a href="#2-deploy-a-docker-image">2. Deploy a Docker Image</a>
     </li>
+    <li class="third-level">
+      <a href="#3-build-from-source">3. Build From Source</a>
+    </li>
+    <li class="third-level">
+      <a href="#begin-announcement-mining">Begin Announcement Mining</a>
+    </li>
+    <li class="second-level">
+      <a href="#how-to-install-a-pkt-miner-on-mac">How to install a PKT miner on Mac</a>
+    </li>
+    
     <li class="second-level">
       <a href="#choosing-pools-to-mine-in">Choosing Pools to mine in</a>
     </li>
     
     <li class="second-level">
-      <a href="#limiting-system-resources">Limiting System Resources</a>
+      <a href="#limiting-system-resource-usage">Limiting System Resource Usage</a>
     </li>
     
     <li class="third-level">
@@ -304,8 +321,10 @@ all mining of PacketCrypt is done in pools.</p>
 </ul>
 <p>Block mining is typically done at the mining pool's datacenter, however Announcement mining can be
 done from anywhere.</p>
+<hr />
 <h2 id="how-to-announcement-mine">How to Announcement mine<a class="headerlink" href="#how-to-announcement-mine" title="Permanent link">&para;</a></h2>
-<h3 id="installing-from-source">Installing from source<a class="headerlink" href="#installing-from-source" title="Permanent link">&para;</a></h3>
+<p>There are a number of options available when it comes to installing the PacketCrpyt announcement miner. Choose whichever best suits your technical ability:</p>
+<h3 id="1-install-a-pre-built-binary">1. Install a Pre-built Binary<a class="headerlink" href="#1-install-a-pre-built-binary" title="Permanent link">&para;</a></h3>
 <p>Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from <a href="https://github.com/cjdelisle/packetcrypt_rs/releases/">packetcrypt releases page</a>.</p>
 <ul>
 <li>For <strong>windows</strong>, download the zip archive suffixed with <code>-windows.zip</code><br />
@@ -320,7 +339,7 @@ done from anywhere.</p>
 </ul>
 </li>
 </ul>
-<h3 id="deploying-a-docker-image">Deploying a Docker Image<a class="headerlink" href="#deploying-a-docker-image" title="Permanent link">&para;</a></h3>
+<h3 id="2-deploy-a-docker-image">2. Deploy a Docker Image<a class="headerlink" href="#2-deploy-a-docker-image" title="Permanent link">&para;</a></h3>
 <p>There is a PacketCrypt Docker image available, which can be used for announcement mining.</p>
 <p>To install:</p>
 <ol>
@@ -333,7 +352,7 @@ done from anywhere.</p>
 </ol>
 <pre><code class="language-console">$ docker pull thomasjp0x42/packetcrypt
 </code></pre>
-<p>There's also available a PacketCrypt Docker image built without the portable flag (<code>--no-portable</code>) which may increase the performance of the announcement mining while reducing CPU compatibility. Image is available at <code>thomasjp0x42/packetcrypt-amd64</code>.</p>
+<p>There are also PacketCrypt Docker images built without the portable flag (<code>--no-portable</code>) which may increase the performance of the announcement mining while reducing CPU compatibility. One such image (compiled on AMD 5950x) is available at <code>thomasjp0x42/packetcrypt-amd64</code>. Additionally, for ARM devices such as Raspberry Pi, there is an image available at <code>thomasjp0x42/packetcrypt-arm64</code>. The arm64 image will also work on Apple silicon such as the M1 and M2 chips.</p>
 <ol>
 <li>Run the container similar to the commands described in the <a href="#begin-announcement-mining">Begin Announcement Mining</a> section, except replace this part of the command:</li>
 </ol>
@@ -346,7 +365,16 @@ done from anywhere.</p>
 <pre><code class="language-console">$ docker run thomasjp0x42/packetcrypt ann -p &lt;your_wallet_address&gt; &lt;pool_1&gt;
 </code></pre>
 <p>More information can be found at the <a href="https://hub.docker.com/r/thomasjp0x42/packetcrypt">PacketCrypt DockerHub page</a></p>
-<h4 id="begin-announcement-mining">Begin Announcement Mining<a class="headerlink" href="#begin-announcement-mining" title="Permanent link">&para;</a></h4>
+<h3 id="3-build-from-source">3. Build From Source<a class="headerlink" href="#3-build-from-source" title="Permanent link">&para;</a></h3>
+<p>Building from source will generally offer the best mining performance but requires more technical knowledge than the previous two options.</p>
+<p>First install rust if you haven't, see: <a href="https://rustup.rs/">rustup</a></p>
+<pre><code>git clone https://github.com/cjdelisle/packetcrypt_rs
+cd packetcrypt_rs
+cargo build --release
+</code></pre>
+<p>See the <a href="https://github.com/cjdelisle/packetcrypt_rs">PacketCrypt GitHub repository</a> for more detailed instructions.</p>
+<hr />
+<h3 id="begin-announcement-mining">Begin Announcement Mining<a class="headerlink" href="#begin-announcement-mining" title="Permanent link">&para;</a></h3>
 <div class="admonition danger">
 <p class="admonition-title">Important</p>
 <p><strong>You cannot mine into the electrum wallet</strong>, You can only mine into the <a href="https://docs.pkt.cash/en/latest/pktd/pktwallet/">Command Line Wallet</a>, the <a href="https://www.pkt.world/wallet">Pkt.World Wallet</a> or the <a href="https://github.com/artrepreneur/PKT-Cash-Wallet/releases">Mac GUI Wallet</a> .</p>
@@ -390,24 +418,33 @@ packetcrypt.exe ann -c "https://example.com/config.json"
 </code></pre>
 <p>Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit announcements to.</p>
 <p>pool_1 is the pool running the highest difficulty. If you notice problems, you can test listing the pools in a different order. The number of pools you mine into is at your discretion. If a pool is down or malfunctioning you will notice the pool is not mining at [100%] in your mining feed and you can choose to remove the under-performing or malfunctioning pool.</p>
+<h2 id="how-to-install-a-pkt-miner-on-mac">How to install a PKT miner on Mac<a class="headerlink" href="#how-to-install-a-pkt-miner-on-mac" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Install the <a href="https://github.com/artrepreneur/Zulu" target="_blank">Zulu</a> or <a href="https://docs.pkt.cash/en/latest/pktd/pktwallet/">CLI</a> PKT Wallet from <a href="https://docs.pkt.cash">https://docs.pkt.cash</a></li>
+<li>Download the <a href="https://github.com/cjdelisle/packetcrypt_rs/releases/tag/packetcrypt-v0.5.0" target="_blank">PacketCrypt.pkg</a> for mac</li>
+<li>Open your Terminal</li>
+<li>Install Rust by entering in the command: <code>$ curl --proto '=https' --tlsv1.2 -sSf * https://sh.rustup.rs | sh</code></li>
+<li>Press <strong>1</strong> to confirm</li>
+<li>Enter the command: <code>$ sudo install make</code></li>
+<li>Enter the command: <code>$ git clone https://github.com/cjdelisle/packetcrypt_rs</code></li>
+<li>Enter the command: <code>$ cd packetcrypt_rs</code></li>
+<li>Enter the command: <code>$ ~/.cargo/bin/cargo build --release</code></li>
+<li>Enter Command: <code>$ packetcrypt</code> 
+<code>$ packetcrypt ann -p [your PKT Wallet Address] [pool 1] [pool 2] [pool 3] [pool 4]</code></li>
+</ol>
 <h2 id="choosing-pools-to-mine-in">Choosing Pools to mine in<a class="headerlink" href="#choosing-pools-to-mine-in" title="Permanent link">&para;</a></h2>
 <p>You can mine in as many pools as you have the bandwidth to supply. The same data will be uploaded so your CPU is only used once. Currently the pools which are regularly winning blocks include:</p>
 <ul>
 <li>Pkteer: <code>http://pool.pkteer.com</code></li>
 <li>PKTPool: <code>http://pool.pktpool.io</code></li>
 <li>PktWorld: <code>http://pool.pkt.world</code></li>
+<li>Zetahash (f.k.a. Srizbi): <code>https://stratum.zetahash.com</code></li>
 </ul>
-<p>If you have bandwidth to spare, you may wish to consider mining with some or all of the new/experimental mining pools listed below. New pools require support from the mining community (in the form of announcements) in order to test their infrastructure and begin to win blocks.</p>
-<ul>
-<li>K1m3r4: <code>http://pool.k1m3r4.com/</code></li>
-<li>Oeuf2: <code>http://oeuf2pool.xyz</code></li>
-<li>Pktco.in: <code>http://pktco.in</code></li>
-<li>Pkt Digger: <code>http://p.master.pktdigger.com/</code></li>
-<li>Pkthash: <code>https://pool.pkthash.com</code></li>
-</ul>
+<p>In general the recommendation is to list the pool with highest difficulty in the first position to ensure your announcements will be accepted, as the standardized policy is to accept announcements of a higher difficulty for pools with a lower base difficulty. In some cases the rewards might vary depending on the pool order regardless of difficulty, subject to custom policies implemented by the respective pools.</p>
 <p>(Check the relevant channels on Discord for current pool statuses)</p>
 <p>You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks.</p>
-<h2 id="limiting-system-resources">Limiting System Resources<a class="headerlink" href="#limiting-system-resources" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="limiting-system-resource-usage">Limiting System Resource Usage<a class="headerlink" href="#limiting-system-resource-usage" title="Permanent link">&para;</a></h2>
 <p>Limiting the system resources available to Packetcrypt may negatively effect your mining power but can be useful to conserve resources for other processess.</p>
 <h4 id="limit-cpu-usage">Limit CPU Usage<a class="headerlink" href="#limit-cpu-usage" title="Permanent link">&para;</a></h4>
 <p>Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the <code>-t</code> CLI parameter or <code>"threads"</code> key if using a configuration file.</p>
@@ -430,6 +467,7 @@ packetcrypt.exe ann -c "https://example.com/config.json"
 <li>Packetcrypt will send the same Announcements to each pool mined</li>
 </ul>
 <p>Bandwidth usage can therefore be limited by selecting a higher difficulty pool as the primary pool and/or by mining to fewer pools.</p>
+<hr />
 <h2 id="block-mining-running-a-pool">Block Mining &amp; Running a Pool<a class="headerlink" href="#block-mining-running-a-pool" title="Permanent link">&para;</a></h2>
 <p>Because each block miner must use as much bandwidth as all of the announcement miners <em>combined</em>,
 block mining is typically done at the location of the pool. Even a pool operator who wanted to
@@ -528,6 +566,7 @@ will be valid for 3 block periods making the power multiplier <code>750 ** 2</co
 <p><img alt="ann_diff_power.png" src="ann_diff_power.png" /></p>
 <p>From here, the power output of the power multiplier of the optimal announcement set halves for each
 doubling of the announcement difficulty, making the optimal difficulty <code>2</code>.</p>
+<hr />
 <h2 id="faq-for-ann-miners">FAQ for ANN Miners<a class="headerlink" href="#faq-for-ann-miners" title="Permanent link">&para;</a></h2>
 <h3 id="what-does-overflow-mean">What does overflow mean?<a class="headerlink" href="#what-does-overflow-mean" title="Permanent link">&para;</a></h3>
 <p>When the ann handler receives an announcement, it puts it into a queue, when the queue fills up it responds overflow immediately. The queue can become long, so you may receive "operation timed out" you're still being paid, when you receive "overflow" you are not being paid.</p>

@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <meta name="description" content="Dev environment">
   
-  <meta name="author" content="PKT">
+  <meta name="author" content="Coconut3">
   
-  <link rel="canonical" href="https://docs.pkt.cash/pktd/pktwallet/">
+  <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktd/pktwallet/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
 
   
@@ -190,6 +191,12 @@
         <li
           class="posts__category-item "
         >
+          <a href="../../wrapped_pkt/">Wrapped PKT</a>
+        </li>
+        
+        <li
+          class="posts__category-item "
+        >
           <a href="../migrating_from_electrum/">Electrum Import</a>
         </li>
         
@@ -261,6 +268,26 @@
       <a href="#creating-a-new-pkt-address">Creating a New PKT Address</a>
     </li>
     
+    <li class="second-level">
+      <a href="#how-to-install-the-pkt-world-wallet-windows-only">How to install the PKT World Wallet (Windows only)</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#how-to-install-a-cli-wallet">How to install a CLI Wallet</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#how-to-start-up-cli-wallet">How to start up CLI Wallet</a>
+    </li>
+    <li class="third-level">
+      <a href="#how-to-create-new-pkt-wallet-address">How to create new PKT wallet address</a>
+    </li>
+    <li class="third-level">
+      <a href="#how-to-send-pkt-from-your-cli-wallet">How to send PKT from your CLI wallet</a>
+    </li>
+    <li class="third-level">
+      <a href="#how-to-install-a-cli-wallet-from-seed">How to install a CLI Wallet from Seed</a>
+    </li>
     <li class="first-level ">
       <a href="#using-your-wallet">Using Your Wallet</a>
     </li>
@@ -368,6 +395,78 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <pre><code>./bin/pktctl --wallet getaddressbalances 1 1
 </code></pre>
 <p><strong>NOTE</strong>: Every time you use <code>getnewaddress</code>, the address you receive must be remembered by pktwallet forever. So, only use it when you actually need an address.</p>
+<h2 id="how-to-install-the-pkt-world-wallet-windows-only">How to install the PKT World Wallet (Windows only)<a class="headerlink" href="#how-to-install-the-pkt-world-wallet-windows-only" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download the <a href="https://www.pkt.world/wallet" target="_blank">PKT World Wallet</a></li>
+<li>Follow the installation instructions</li>
+<li>Launch wallet</li>
+<li>Create a new wallet</li>
+<li>Enter a wallet passphrase. Make sure to save your passphrase in a safe place.</li>
+<li>Write down your wallet seed. It is very important to keep your seed in a safe place</li>
+<li>To generate a new PKT address, click Wallet.</li>
+<li>Generate new address</li>
+<li>To begin mining using the PKT World Wallet, click Miner</li>
+<li>Start Mining</li>
+</ol>
+<h2 id="how-to-install-a-cli-wallet">How to install a CLI Wallet<a class="headerlink" href="#how-to-install-a-cli-wallet" title="Permanent link">&para;</a></h2>
+<p>If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:</p>
+<ol>
+<li>Download <a href="https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg" target="_blank">pktd-v1.5.1-macos.pkg</a></li>
+<li>Run the installation</li>
+<li>Open Terminal</li>
+<li>Enter the command: <code>$ ~/pktwallet --create --wallet xxxx</code>  <br />
+<em><code>xxxx</code> is the name of the wallet i.e. wallet personal</em><br />
+<em>Make sure to write this down for your notes</em>  </li>
+<li>Enter passphrase or leave empty<br />
+<em>Make sure to write this down for you notes</em></li>
+<li>Do NOT add additional layer of security</li>
+<li>Copy down your seed. If your wallet is destroyed, you can recover it as long as you have this seed and your wallet passphrase. Please keep in mind that anyone who has access to the seed only needs to guess your wallet passphrase to access your funds.</li>
+<li>Follow the instructions to finalize wallet</li>
+</ol>
+<h3 id="how-to-start-up-cli-wallet">How to start up CLI Wallet<a class="headerlink" href="#how-to-start-up-cli-wallet" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open terminal</li>
+<li>Enter the command:<br />
+<code>$ ~/pktwallet --wallet</code><br />
+<em>(whatever you named your wallet) i.e</em> <code>wallet personal</code></li>
+</ol>
+<h3 id="how-to-create-new-pkt-wallet-address">How to create new PKT wallet address<a class="headerlink" href="#how-to-create-new-pkt-wallet-address" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure you have the CLI wallet running in a separate terminal window</li>
+<li>Open Terminal</li>
+<li>Enter command: <code>$ ~/pktctl --wallet getnewaddress</code><br />
+<em>Save your address in a safe place that is easily accessible</em></li>
+</ol>
+<h3 id="how-to-send-pkt-from-your-cli-wallet">How to send PKT from your CLI wallet<a class="headerlink" href="#how-to-send-pkt-from-your-cli-wallet" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure you have the CLI wallet running in a separate terminal window</li>
+<li>Open terminal</li>
+<li>Enter Command: <code>$ ~/pktctl --wallet sendfrom pkt1xxxxx $$$$ '["pkt1xxxxx"]'</code><br />
+<em>xxxxx = PKT address you want to send from and to</em><br />
+<em>$$$$ = amount of pkt you want to send</em></li>
+</ol>
+<h3 id="how-to-install-a-cli-wallet-from-seed">How to install a CLI Wallet from Seed<a class="headerlink" href="#how-to-install-a-cli-wallet-from-seed" title="Permanent link">&para;</a></h3>
+<p>If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:</p>
+<ol>
+<li>Download <a href="https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg" target="_blank">pktd-v1.5.1-macos.pkg</a></li>
+<li>Run the installation</li>
+<li>Open Terminal</li>
+<li>Enter the command: <code>$ ~/pktwallet --create --wallet xxxx</code><br />
+<em>xxxx is the name of the wallet i.e. wallet personal</em><br />
+<em>Make sure to write this down for your notes</em></li>
+<li>Enter passphrase or leave empty<br />
+<em>Make sure to write this down for you notes</em></li>
+<li>Do NOT add additional layer of security</li>
+<li>Enter seed</li>
+<li>Start up wallet (see instructions above)</li>
+<li>Open new terminal window</li>
+<li>Enter the command: <code>$ ~/pktctl --wallet getnewaddress</code><br />
+<em>repeat until you find receive (each of) your recovered wallet address(es)</em></li>
+<li>Enter the command: <code>$ ~/pktctl --wallet resync</code><br />
+<em>This will resync the wallet to the blockchain (takes at least 24 hours)</em></li>
+<li>Enter the command: <code>$ ~/pktctl --wallet getaddressbalances 1 1</code><br />
+<em>this is how you view all your (sub)wallet balances</em></li>
+</ol>
 <h1 id="using-your-wallet">Using Your Wallet<a class="headerlink" href="#using-your-wallet" title="Permanent link">&para;</a></h1>
 <p>pktctl is the program that interfaces with a running pktwallet instance. pktctl functions will not work if pktwallet is not running and accessible. Some functions will be limited until pktwallet is fully synchronized. Some functions require the wallet being unlocked before executing.</p>
 <h2 id="getting-your-balance">Getting Your Balance<a class="headerlink" href="#getting-your-balance" title="Permanent link">&para;</a></h2>
