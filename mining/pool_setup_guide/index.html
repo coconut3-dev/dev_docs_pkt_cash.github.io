@@ -21,9 +21,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
   <link href='https://rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-  <link
-    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
-    rel='stylesheet' type='text/css'>
   <link href="../../css/bootstrap-custom.css" rel="stylesheet">
   <link href="../../css/base.css" rel="stylesheet">
   <link href="../../css/pkt.css" rel="stylesheet">
@@ -147,252 +144,69 @@
   </header>
 
   
-<section class="posts">
-  <div class="container">
-    <div class="post__category-wrap">
-      <ul class="posts__category">
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../..">Home</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../electrum/">PKT Electrum</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../">Mining</a>
-        </li>
-        
-        <li
-          class="posts__category-item  active"
-        >
-          <a href="./">Pool Operation</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../pktd/">Pktd</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../pktd/pktwallet/">PKTWallet</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../wrapped_pkt/">Wrapped PKT</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../pktd/migrating_from_electrum/">Electrum Import</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../PKT_FAQ/">FAQ</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../code_of_conduct/">Code of Conduct</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../commercial/">Commercial</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../useful_tools/">Useful Tools</a>
-        </li>
-        
-        <li
-          class="posts__category-item "
-        >
-          <a href="../../communication/">Communication</a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</section>
 
   <div class="container">
     
     
-    <div class="col-md-3 sidebar-wrapper"><div class="bs-sidebar hidden-print affix well" role="complementary">
-  <ul class="nav bs-sidenav">
-    <li class="first-level active">
-      <a href="#setting-up-a-pool">Setting up a Pool</a>
-    </li>
-    <li class="second-level">
-      <a href="#expectations">Expectations</a>
+      <div class="col-md-3 sidebar-wrapper">
+<div class="post__category-wrap">
+  <ul class="posts__category">
+    
+    <li class="posts__category-item ">
+      <a href="../..">Home</a>
     </li>
     
-    <li class="second-level">
-      <a href="#block-mining-running-a-pool">Block mining &amp; running a pool</a>
+    <li class="posts__category-item ">
+      <a href="../../electrum/">PKT Electrum</a>
     </li>
     
-    <li class="first-level ">
-      <a href="#general-information">General Information</a>
-    </li>
-    <li class="second-level">
-      <a href="#repository-information">Repository Information:</a>
+    <li class="posts__category-item ">
+      <a href="../">Mining</a>
     </li>
     
-    <li class="second-level">
-      <a href="#assumed-network-ranges">Assumed network Ranges:</a>
+    <li class="posts__category-item  active">
+      <a href="./">Pool Operation</a>
     </li>
     
-    <li class="second-level">
-      <a href="#assumed-port-ranges">Assumed Port Ranges:</a>
+    <li class="posts__category-item ">
+      <a href="../../pktd/">Pktd</a>
     </li>
     
-    <li class="first-level ">
-      <a href="#installation">Installation</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-1">Machine 1</a>
+    <li class="posts__category-item ">
+      <a href="../../pktd/pktwallet/">PKTWallet</a>
     </li>
     
-    <li class="third-level">
-      <a href="#pktd-node">PKTD node:</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-2">Machine 2</a>
+    <li class="posts__category-item ">
+      <a href="../../wrapped_pkt/">Wrapped PKT</a>
     </li>
     
-    <li class="third-level">
-      <a href="#master-paymaker-blkhandler">Master | Paymaker | BlkHandler:</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-4-6">Machine 4 - 6</a>
+    <li class="posts__category-item ">
+      <a href="../../pktd/migrating_from_electrum/">Electrum Import</a>
     </li>
     
-    <li class="third-level">
-      <a href="#blkminer-annhandler-annminer">BlkMiner | AnnHandler | AnnMiner:</a>
-    </li>
-    <li class="first-level ">
-      <a href="#config-of-pooljs">Config of pool.js</a>
-    </li>
-    <li class="second-level">
-      <a href="#configprivateseed">config.privateSeed</a>
+    <li class="posts__category-item ">
+      <a href="../../PKT_FAQ/">FAQ</a>
     </li>
     
-    <li class="second-level">
-      <a href="#configpaymakerhttppasswd">config.paymakerHttpPasswd</a>
+    <li class="posts__category-item ">
+      <a href="../../code_of_conduct/">Code of Conduct</a>
     </li>
     
-    <li class="second-level">
-      <a href="#configmasterurl">config.masterUrl</a>
+    <li class="posts__category-item ">
+      <a href="../../commercial/">Commercial</a>
     </li>
     
-    <li class="second-level">
-      <a href="#configrpc">config.rpc</a>
+    <li class="posts__category-item ">
+      <a href="../../useful_tools/">Useful Tools</a>
     </li>
     
-    <li class="second-level">
-      <a href="#configannhandlers">config.annHandlers</a>
-    </li>
-    
-    <li class="second-level">
-      <a href="#configblkhandlers">config.blkHandlers</a>
-    </li>
-    
-    <li class="second-level">
-      <a href="#configmaster">config.master</a>
-    </li>
-    
-    <li class="second-level">
-      <a href="#configpaymaker">config.payMaker</a>
-    </li>
-    
-    <li class="third-level">
-      <a href="#anncompressor">annCompressor</a>
-    </li>
-    <li class="first-level ">
-      <a href="#config-of-pooltoml">Config of pool.toml</a>
-    </li>
-    <li class="second-level">
-      <a href="#ann_handlerah">ann_handler.ah*</a>
-    </li>
-    
-    <li class="second-level">
-      <a href="#note-to-bind-low-ports-with-non-root-user-run">NOTE: To bind low ports with non-root user run:</a>
-    </li>
-    
-    <li class="first-level ">
-      <a href="#running-manually">Running Manually</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-1_1">Machine 1</a>
-    </li>
-    
-    <li class="third-level">
-      <a href="#pktd">PKTD</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-2_1">Machine 2</a>
-    </li>
-    
-    <li class="third-level">
-      <a href="#master">Master</a>
-    </li>
-    <li class="third-level">
-      <a href="#paymaker">Paymaker</a>
-    </li>
-    <li class="third-level">
-      <a href="#blkhandlers">BlkHandler(s)</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-3">Machine 3</a>
-    </li>
-    
-    <li class="third-level">
-      <a href="#annhandler">AnnHandler</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-4">Machine 4</a>
-    </li>
-    
-    <li class="third-level">
-      <a href="#annhandler_1">AnnHandler</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-5-and-6">Machine 5 and 6</a>
-    </li>
-    
-    <li class="third-level">
-      <a href="#blkminer">BlkMiner</a>
-    </li>
-    <li class="first-level ">
-      <a href="#nginx-setup-for-allowing-external-annmining">NGINX Setup (For allowing external AnnMining)</a>
-    </li>
-    <li class="second-level">
-      <a href="#machine-2_2">Machine 2</a>
+    <li class="posts__category-item ">
+      <a href="../../communication/">Communication</a>
     </li>
     
   </ul>
 </div></div>
-    <div class="col-md-9" role="main"> <h1 id="setting-up-a-pool"><strong>Setting up a Pool</strong><a class="headerlink" href="#setting-up-a-pool" title="Permanent link">&para;</a></h1>
+      <div class="col-md-7" role="main"> <h1 id="setting-up-a-pool"><strong>Setting up a Pool</strong><a class="headerlink" href="#setting-up-a-pool" title="Permanent link">&para;</a></h1>
 <h3 id="expectations">Expectations<a class="headerlink" href="#expectations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>General knowledge of Linux</li>
@@ -919,6 +733,160 @@ server {
 <p>Reload nginx to pick up config changes.</p>
 <pre><code>sudo systemctl reload nginx
 </code></pre></div>
+      <div class="col-md-2 sidebar-wrapper"><div class="bs-sidebar hidden-print affix well" role="complementary">
+  <ul class="nav bs-sidenav">
+    <li class="first-level active">
+      <a href="#setting-up-a-pool">Setting up a Pool</a>
+    </li>
+    <li class="second-level">
+      <a href="#expectations">Expectations</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#block-mining-running-a-pool">Block mining &amp; running a pool</a>
+    </li>
+    
+    <li class="first-level ">
+      <a href="#general-information">General Information</a>
+    </li>
+    <li class="second-level">
+      <a href="#repository-information">Repository Information:</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#assumed-network-ranges">Assumed network Ranges:</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#assumed-port-ranges">Assumed Port Ranges:</a>
+    </li>
+    
+    <li class="first-level ">
+      <a href="#installation">Installation</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-1">Machine 1</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#pktd-node">PKTD node:</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-2">Machine 2</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#master-paymaker-blkhandler">Master | Paymaker | BlkHandler:</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-4-6">Machine 4 - 6</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#blkminer-annhandler-annminer">BlkMiner | AnnHandler | AnnMiner:</a>
+    </li>
+    <li class="first-level ">
+      <a href="#config-of-pooljs">Config of pool.js</a>
+    </li>
+    <li class="second-level">
+      <a href="#configprivateseed">config.privateSeed</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configpaymakerhttppasswd">config.paymakerHttpPasswd</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configmasterurl">config.masterUrl</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configrpc">config.rpc</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configannhandlers">config.annHandlers</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configblkhandlers">config.blkHandlers</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configmaster">config.master</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#configpaymaker">config.payMaker</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#anncompressor">annCompressor</a>
+    </li>
+    <li class="first-level ">
+      <a href="#config-of-pooltoml">Config of pool.toml</a>
+    </li>
+    <li class="second-level">
+      <a href="#ann_handlerah">ann_handler.ah*</a>
+    </li>
+    
+    <li class="second-level">
+      <a href="#note-to-bind-low-ports-with-non-root-user-run">NOTE: To bind low ports with non-root user run:</a>
+    </li>
+    
+    <li class="first-level ">
+      <a href="#running-manually">Running Manually</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-1_1">Machine 1</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#pktd">PKTD</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-2_1">Machine 2</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#master">Master</a>
+    </li>
+    <li class="third-level">
+      <a href="#paymaker">Paymaker</a>
+    </li>
+    <li class="third-level">
+      <a href="#blkhandlers">BlkHandler(s)</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-3">Machine 3</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#annhandler">AnnHandler</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-4">Machine 4</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#annhandler_1">AnnHandler</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-5-and-6">Machine 5 and 6</a>
+    </li>
+    
+    <li class="third-level">
+      <a href="#blkminer">BlkMiner</a>
+    </li>
+    <li class="first-level ">
+      <a href="#nginx-setup-for-allowing-external-annmining">NGINX Setup (For allowing external AnnMining)</a>
+    </li>
+    <li class="second-level">
+      <a href="#machine-2_2">Machine 2</a>
+    </li>
+    
+  </ul>
+</div></div>
     
     
   </div>

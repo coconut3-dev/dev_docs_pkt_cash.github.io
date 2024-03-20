@@ -1,43 +1,29 @@
 @font-face {
-    font-family: "Pop";
-    src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: block;
 }
 @font-face {
-    font-family: "Pop";
-    src: url("../fonts/Poppins-Light.ttf") format("truetype");
-    font-weight: 300;
+    font-family: "Inter";
+    src: url("../fonts/Inter-SemiBold.ttf") format("truetype");
+    font-weight: 600;
     font-style: normal;
     font-display: block;
 }
 @font-face {
-    font-family: "Pop";
-    src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+    font-family: "Inter";
+    src: url("../fonts/Inter-Bold.ttf") format("truetype");
     font-weight: 700;
-    font-style: normal;
-    font-display: block;
-}
-@font-face {
-    font-family: "Pop";
-    src: url("../fonts/Poppins-LightItalic.ttf") format("truetype");
-    font-weight: 300;
     font-style: italic;
-    font-display: block;
-}
-@font-face {
-    font-family: "TT Norms";
-    src: url("../fonts/TTNorms-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: block;
-}
-@font-face {
-    font-family: "TT Norms";
-    src: url("../fonts/TTNorms-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
     font-display: block;
 }
 
@@ -46,7 +32,7 @@ html {
 }
 
 body {
-    font-family: "Pop", serif !important;
+    font-family: "Inter", serif !important;
 }
 
 p > img {
@@ -392,14 +378,8 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   }
   
   .posts__category {
-    display: flex;
-    /* justify-content: space-evenly; */
-    align-items: flex-start;
-    flex-wrap: wrap;
     position: relative;
-  
     margin-right: 20px;
-  
     overflow: auto;
     scrollbar-width: none;
   }
@@ -407,50 +387,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   .posts__category-wrap {
     position: relative;
     margin-bottom: 60px;
-    margin-right: -20px;
-  }
-  
-  @media (max-width: 992px) {
-    .posts__category-wrap {
-      justify-content: start;
-  
-      margin-bottom: 30px;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .posts__category-wrap {
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .posts__category-wrap::after {
-      position: absolute;
-      top: 0;
-      left: calc(100% - 69px);
-      bottom: 0;
-      right: 0;
-      
-      background: linear-gradient(270deg, #FFFFFF 18.75%, rgba(255, 255, 255, 0) 100%);
-      content: '';
-      pointer-events: none;
-    }
-  }
-  
-  .posts__category::-webkit-scrollbar { 
-    display: none; 
-  }
-  
-  @media (max-width: 992px) {
-    .posts__category {
-      justify-content: start;
-    }
-  }
-
-  .posts__category {
-      list-style: none;
-      padding-left: 0;
   }
 
   .posts__category-item {
@@ -461,12 +397,8 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     padding: 5px 15px;
     margin-right: 10px;
     margin-bottom: 10px;
-  
     font-size: 19px;
     line-height: 35px;
-    background: #F3F3F3;
-    border: 1px solid #F3F3F3;
-    border-radius: 39px;
     transition: 0.3s all ease;
     cursor: pointer;
     white-space: nowrap;
@@ -585,7 +517,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     margin-bottom: 9px;
     font-size: 19px;
     line-height: 30px;
-    font-family: "TT Norms";
     font-weight: 700;
     font-style: normal !important;
     color: #fff !important;
@@ -602,7 +533,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     .footer__social-title,
     .footer__links-title {
       margin-bottom: 14px;
-      font-family: "TT Norms";
       color: rgba(255, 255, 255, 0.5);
       font-size: 13px;
       line-height: 20px;
@@ -613,7 +543,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   .footer__links-link {
     font-size: 19px;
     line-height: 45px;
-    font-family: "TT Norms";
     font-weight: 300;
     color: #fff !important;
   }
@@ -621,7 +550,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   @media (max-width: 600px) {
     .footer__social-link,
     .footer__links-link {
-      font-family: "TT Norms";
       font-weight: 400;
       font-size: 13px;
       line-height: 30px;
@@ -660,8 +588,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
   .footer__copy {
     width: 100%;
     margin-top: -5px;
-  
-    font-family: 'TT Norms';
     font-size: 19px;
     line-height: 19px;
     opacity: 0.4;
