@@ -6,7 +6,7 @@ repo_url: "https://github.com/coconut3-dev/dev_docs_pkt_cash.github.io"
 
 theme:
   name: null
-  custom_dir: pkt
+  custom_dir: pkt-docs
   colorscheme: github
   highlightjs: true
 
