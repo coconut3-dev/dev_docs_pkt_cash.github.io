@@ -174,28 +174,28 @@ done from anywhere.</p>
 <p>Download the PacketCrypt Docker image:</p>
 </li>
 </ol>
-<pre><code class="language-console">$ docker pull thomasjp0x42/packetcrypt
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>docker<span class="w"> </span>pull<span class="w"> </span>thomasjp0x42/packetcrypt
+</code></pre></div>
 <p>There are also PacketCrypt Docker images built without the portable flag (<code>--no-portable</code>) which may increase the performance of the announcement mining while reducing CPU compatibility. One such image (compiled on AMD 5950x) is available at <code>thomasjp0x42/packetcrypt-amd64</code>. Additionally, for ARM devices such as Raspberry Pi, there is an image available at <code>thomasjp0x42/packetcrypt-arm64</code>. The arm64 image will also work on Apple silicon such as the M1 and M2 chips.</p>
 <ol>
 <li>Run the container similar to the commands described in the <a href="#begin-announcement-mining">Begin Announcement Mining</a> section, except replace this part of the command:</li>
 </ol>
-<pre><code class="language-console">$ packetcrypt
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>packetcrypt
+</code></pre></div>
 <p>with this command to run PacketCrypt from Docker:</p>
-<pre><code class="language-command">$ docker run thomasjp0x42/packetcrypt
-</code></pre>
+<div class="highlight"><pre><span></span><code>$ docker run thomasjp0x42/packetcrypt
+</code></pre></div>
 <p>The final command will be formatted like this:</p>
-<pre><code class="language-console">$ docker run thomasjp0x42/packetcrypt ann -p &lt;your_wallet_address&gt; &lt;pool_1&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>docker<span class="w"> </span>run<span class="w"> </span>thomasjp0x42/packetcrypt<span class="w"> </span>ann<span class="w"> </span>-p<span class="w"> </span>&lt;your_wallet_address&gt;<span class="w"> </span>&lt;pool_1&gt;
+</code></pre></div>
 <p>More information can be found at the <a href="https://hub.docker.com/r/thomasjp0x42/packetcrypt">PacketCrypt DockerHub page</a></p>
 <h3 id="3-build-from-source">3. Build From Source<a class="headerlink" href="#3-build-from-source" title="Permanent link">&para;</a></h3>
 <p>Building from source will generally offer the best mining performance but requires more technical knowledge than the previous two options.</p>
 <p>First install rust if you haven't, see: <a href="https://rustup.rs/">rustup</a></p>
-<pre><code>git clone https://github.com/cjdelisle/packetcrypt_rs
+<div class="highlight"><pre><span></span><code>git clone https://github.com/cjdelisle/packetcrypt_rs
 cd packetcrypt_rs
 cargo build --release
-</code></pre>
+</code></pre></div>
 <p>See the <a href="https://github.com/cjdelisle/packetcrypt_rs">PacketCrypt GitHub repository</a> for more detailed instructions.</p>
 <hr />
 <h3 id="begin-announcement-mining">Begin Announcement Mining<a class="headerlink" href="#begin-announcement-mining" title="Permanent link">&para;</a></h3>
@@ -216,7 +216,7 @@ packetcrypt.exe ann -p &lt;your_wallet_address&gt; pool_1 [pool_2 pool_3 pool_4]
 <p>A configuration file must be in JSON format. The file can be loaded from the local filesystem or from a web-accessible location.</p>
 <p>Any CLI parameters used will overide the corresponding settings in the configuration file.</p>
 <p>Example config.json:</p>
-<pre><code>{
+<p><div class="highlight"><pre><span></span><code>{
   &quot;payment_addr&quot;: &quot;&lt;your_wallet_address&gt;&quot;,
   &quot;pools&quot;: [
     &quot;pool_1&quot;,
@@ -225,10 +225,9 @@ packetcrypt.exe ann -p &lt;your_wallet_address&gt; pool_1 [pool_2 pool_3 pool_4]
     &quot;pool_4&quot;
   ]
 }
-</code></pre>
-<pre><code>packetcrypt ann -c "./config.json"
-
-[or]
+</code></pre></div>
+    packetcrypt ann -c "./config.json"</p>
+<pre><code>[or]
 
 packetcrypt ann -c "https://example.com/config.json"
 
@@ -272,13 +271,13 @@ packetcrypt.exe ann -c "https://example.com/config.json"
 <h4 id="limit-cpu-usage">Limit CPU Usage<a class="headerlink" href="#limit-cpu-usage" title="Permanent link">&para;</a></h4>
 <p>Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the <code>-t</code> CLI parameter or <code>"threads"</code> key if using a configuration file.</p>
 <p>Example of assigning four (4) threads to Packetcrypt:</p>
-<pre><code>packetcrypt ann -p &lt;your_wallet_address&gt; pool_1 [pool_2 pool_3 pool_4] -t 4
-</code></pre>
+<div class="highlight"><pre><span></span><code>packetcrypt ann -p &lt;your_wallet_address&gt; pool_1 [pool_2 pool_3 pool_4] -t 4
+</code></pre></div>
 <p>or</p>
-<pre><code>{
+<div class="highlight"><pre><span></span><code>{
   &quot;threads&quot; 4
 }
-</code></pre>
+</code></pre></div>
 <h4 id="limit-bandwidth-usage">Limit Bandwidth Usage<a class="headerlink" href="#limit-bandwidth-usage" title="Permanent link">&para;</a></h4>
 <p>Bandwidth usage is directly related to two main factors:</p>
 <p>1 - Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)</p>
