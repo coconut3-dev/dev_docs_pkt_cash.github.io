@@ -267,31 +267,27 @@
 <ol>
 <li>Install Golang</li>
 </ol>
-<pre><code>sudo add-apt-repository ppa:longsleep/golang-backports
+<p><div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt update
 sudo apt install golang-go
-</code></pre>
-<ol>
-<li>Install git</li>
-</ol>
-<pre><code>sudo apt install git
-</code></pre>
-<ol>
-<li>Install the pktd node</li>
-</ol>
-<pre><code>git clone --branch develop https://github.com/pkt-cash/pktd 
+</code></pre></div>
+2. Install git</p>
+<p><div class="highlight"><pre><span></span><code>sudo apt install git
+</code></pre></div>
+3. Install the pktd node
+<div class="highlight"><pre><span></span><code>git clone --branch develop https://github.com/pkt-cash/pktd 
 cd pktd 
 ./do
-</code></pre>
-<p>The output should show the following:</p>
-<pre><code>Everything looks good - use ./bin/pktd to launch
-</code></pre>
+</code></pre></div>
+The output should show the following:
+<div class="highlight"><pre><span></span><code>Everything looks good - use ./bin/pktd to launch
+</code></pre></div></p>
 <h2 id="machine-2"><em>Machine 2</em><a class="headerlink" href="#machine-2" title="Permanent link">&para;</a></h2>
 <h3 id="master-paymaker-blkhandler">Master | Paymaker | BlkHandler:<a class="headerlink" href="#master-paymaker-blkhandler" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Install the required tools:</li>
-</ol>
-<pre><code>cd ~
+<li>
+<p>Install the required tools:
+<div class="highlight"><pre><span></span><code>cd ~
 sudo add-apt-repository universe
 sudo apt install git
 sudo apt install make
@@ -299,39 +295,35 @@ sudo apt install npm
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
-</code></pre>
-<p>Restart your shell ### Add here how to get latest stable version of node</p>
-<ol>
-<li>Clone the source code:</li>
-</ol>
-<pre><code>git clone --branch master https://github.com/cjdelisle/PacketCrypt
-</code></pre>
-<ol>
-<li>Build the PacketCrypt code</li>
-</ol>
-<pre><code>cd PacketCrypt
+</code></pre></div>
+Restart your shell ### Add here how to get latest stable version of node</p>
+</li>
+<li>
+<p>Clone the source code:
+<div class="highlight"><pre><span></span><code>git clone --branch master https://github.com/cjdelisle/PacketCrypt
+</code></pre></div></p>
+</li>
+<li>Build the PacketCrypt code
+<div class="highlight"><pre><span></span><code>cd PacketCrypt
 npm install
-</code></pre>
+</code></pre></div></li>
+</ol>
 <h2 id="machine-4-6"><em>Machine 4 - 6</em><a class="headerlink" href="#machine-4-6" title="Permanent link">&para;</a></h2>
 <h3 id="blkminer-annhandler-annminer">BlkMiner | AnnHandler | AnnMiner:<a class="headerlink" href="#blkminer-annhandler-annminer" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Install the Required tools:</li>
-</ol>
-<pre><code>sudo apt install gcc git
+<li>Install the Required tools:
+<div class="highlight"><pre><span></span><code>sudo apt install gcc git
 sudo apt install curl
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-</code></pre>
-<ol>
-<li>Clone packetcrypt_rs</li>
-</ol>
-<pre><code>git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
-</code></pre>
-<ol>
-<li>Compile PacketCrypt</li>
-</ol>
-<pre><code>cd packetcrypt_rs 
+curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre></div></li>
+<li>Clone packetcrypt_rs
+<div class="highlight"><pre><span></span><code>git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
+</code></pre></div></li>
+<li>Compile PacketCrypt
+<div class="highlight"><pre><span></span><code>cd packetcrypt_rs 
 ~/.cargo/bin/cargo build --release --features jemalloc
-</code></pre>
+</code></pre></div></li>
+</ol>
 <h1 id="config-of-pooljs">Config of pool.js<a class="headerlink" href="#config-of-pooljs" title="Permanent link">&para;</a></h1>
 <p><strong><em>Information:</em></strong> </p>
 <ul>
@@ -342,9 +334,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 <h3 id="configprivateseed">config.privateSeed<a class="headerlink" href="#configprivateseed" title="Permanent link">&para;</a></h3>
 <p>Signing of announcements is rarely used, it breaks people mining into multiple pools, and you should set it to null unless "you know what you're doing"</p>
 <p>This seed is used for deriving keys which will be used for signing announcements.</p>
-<p>Setting this value to an alphanumeric value e.g </p>
-<pre><code>oHk8TXpbtRRZGtaYYMnIFAzYMrVh6vA8XzKWWXcKbzCThuFLIJ234bHN5peddQFzR2TtQyo58gcFRP7bKg9BeXZirSqp9gVpjBWp
-</code></pre>
+<p>Setting this value to an alphanumeric value e.g 
+<div class="highlight"><pre><span></span><code>oHk8TXpbtRRZGtaYYMnIFAzYMrVh6vA8XzKWWXcKbzCThuFLIJ234bHN5peddQFzR2TtQyo58gcFRP7bKg9BeXZirSqp9gVpjBWp
+</code></pre></div></p>
 <p>In general, this value should be set to the null, as signing announcements is rarely used, and breaks Announcement mining with multiple pools if you have your pool externally accessable, and should only be set if you have a strong understanding and knowledge of what you are doing.</p>
 <p><code>config.privateSeed = null</code></p>
 <p>If you aren't bothered by, or don't require your announcements to be signed .</p>
@@ -353,24 +345,24 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 <p>Anyone who has this password can make http posts to the paymaker (claim that shares were won)
 You should make this random and also firewall the paymaker from the public.
 The upload will be done using Authorization Basic with a username of "x" and this as the password</p>
-<pre><code>config.paymakerHttpPasswd = 'anyone with this password can post results to the paymaker';
-</code></pre>
-<p>You can put the paymaker behind an http proxy if you wish.</p>
+<p><div class="highlight"><pre><span></span><code>config.paymakerHttpPasswd = &#39;anyone with this password can post results to the paymaker&#39;;
+</code></pre></div>
+You can put the paymaker behind an http proxy if you wish.</p>
 <hr />
 <h3 id="configmasterurl">config.masterUrl<a class="headerlink" href="#configmasterurl" title="Permanent link">&para;</a></h3>
 <p>This is used by the paymaker and block handler when running them with pool.js, it is used to resolve where the master is.</p>
-<p>You can either set this as a locally host or put your master behind a nginx proxy</p>
-<pre><code>config.masterUrl = 'http://localhost:8080';
-</code></pre>
-<p>or if you have your instance public, and you want to have it be resolvable publically, <strong><em>replace the url with your own.</em></strong></p>
-<pre><code>config.masterUrl = 'http://pool.pktpool.io';
-</code></pre>
+<p>You can either set this as a locally host or put your master behind a nginx proxy
+<div class="highlight"><pre><span></span><code>config.masterUrl = &#39;http://localhost:8080&#39;;
+</code></pre></div>
+or if you have your instance public, and you want to have it be resolvable publically, <strong><em>replace the url with your own.</em></strong>
+<div class="highlight"><pre><span></span><code>config.masterUrl = &#39;http://pool.pktpool.io&#39;;
+</code></pre></div></p>
 <hr />
 <h3 id="configrpc">config.rpc<a class="headerlink" href="#configrpc" title="Permanent link">&para;</a></h3>
-<p>The username and password set here, should be the same username and password used at the end of this guide for when you configure the pktd service.</p>
-<pre><code>user:  'x',
-pass:  'x',
-</code></pre>
+<p>The username and password set here, should be the same username and password used at the end of this guide for when you configure the pktd service.
+<div class="highlight"><pre><span></span><code>user:  &#39;x&#39;,
+pass:  &#39;x&#39;,
+</code></pre></div></p>
 <hr />
 <h3 id="configannhandlers">config.annHandlers<a class="headerlink" href="#configannhandlers" title="Permanent link">&para;</a></h3>
 <p><strong><em>Information:</em></strong> </p>
@@ -380,13 +372,13 @@ pass:  'x',
 <li>If you plan to allow external AnnMiners (AnnMiners not on your LAN to mine against your pool, the url's placed in the AnnHandlers list, should be externally resolvable.</li>
 </ul>
 <p>The address that is advertized for accessing this ann handler (external address)</p>
-<p>If running locally use:</p>
-<pre><code>url:  'http://10.0.16.3:8081','http://10.0.16.4:8081'
-</code></pre>
-<p>If allowing external annminers use a resolved address such as:</p>
-<pre><code>url: 'http://ann1.pktpool.io','http://ann2.pktpool.io'
-</code></pre>
-<p><strong><em>Replace the url with your own.</em></strong></p>
+<p>If running locally use:
+<div class="highlight"><pre><span></span><code>url:  &#39;http://10.0.16.3:8081&#39;,&#39;http://10.0.16.4:8081&#39;
+</code></pre></div>
+If allowing external annminers use a resolved address such as:
+<div class="highlight"><pre><span></span><code>url: &#39;http://ann1.pktpool.io&#39;,&#39;http://ann2.pktpool.io&#39;
+</code></pre></div>
+<strong><em>Replace the url with your own.</em></strong></p>
 <hr />
 <h3 id="configblkhandlers">config.blkHandlers<a class="headerlink" href="#configblkhandlers" title="Permanent link">&para;</a></h3>
 <p><strong><em>Information:</em></strong> </p>
@@ -395,40 +387,40 @@ pass:  'x',
 <li>BlockHandlers are low-effort high-volume single-threaded workers.</li>
 </ul>
 <p>What address should be advertized for accessing this BlkHander, again make sure there are no overlapping ports.</p>
-<p>If you are wanting to support external blockminers, this address should be externally resolvable</p>
-<pre><code>url:  'http://localhost:8100',
-</code></pre>
-<p>This is the port that the blkHandler will bind to.</p>
-<pre><code>port:  8082,
-</code></pre>
-<p>This is the host that the blkHandler will bind to.</p>
-<pre><code>host:  '::',
-</code></pre>
-<p>This is  how many requests a blkHandler can queue before the handler starts rejecting requests</p>
-<pre><code>maxConnections:  50,
-</code></pre>
-<pre><code>root:  config
-</code></pre>
+<p>If you are wanting to support external blockminers, this address should be externally resolvable
+<div class="highlight"><pre><span></span><code>url:  &#39;http://localhost:8100&#39;,
+</code></pre></div>
+This is the port that the blkHandler will bind to.
+<div class="highlight"><pre><span></span><code>port:  8082,
+</code></pre></div>
+This is the host that the blkHandler will bind to.
+<div class="highlight"><pre><span></span><code>host:  &#39;::&#39;,
+</code></pre></div>
+This is  how many requests a blkHandler can queue before the handler starts rejecting requests
+<div class="highlight"><pre><span></span><code>maxConnections:  50,
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>root:  config
+</code></pre></div></p>
 <hr />
 <h3 id="configmaster">config.master<a class="headerlink" href="#configmaster" title="Permanent link">&para;</a></h3>
-<p>Which port to run the master on</p>
-<pre><code>port:  8080,
-</code></pre>
-<p>What address to bind to, set to localhost if proxying</p>
-<pre><code>host:  '::',
-</code></pre>
+<p>Which port to run the master on
+<div class="highlight"><pre><span></span><code>port:  8080,
+</code></pre></div>
+ What address to bind to, set to localhost if proxying
+<div class="highlight"><pre><span></span><code>host:  &#39;::&#39;,
+</code></pre></div></p>
 <p>Minimum work for an announcement.
-This number is effectively a bandwidth divisor, every time you double this number you will reduce your bandwidth by a factor of two.</p>
-<pre><code>annMinWork:  Util.annWorkToTarget(128),
-</code></pre>
-<p>Average number of shares per block, reducing this number will reduce load on your block handlers, 
+This number is effectively a bandwidth divisor, every time you double this number you will reduce your bandwidth by a factor of two.
+<div class="highlight"><pre><span></span><code>annMinWork:  Util.annWorkToTarget(128),
+</code></pre></div>
+Average number of shares per block, reducing this number will reduce load on your block handlers, 
 but increasing it will allow payment to be spread more evenly between block miners.</p>
 <p>This wants to be set to a higher number than one, for the purpose of constantly testing that the block miners are making valid shares. You may have a block miner sitting for hours without a share and then when it wins one, it can become invalid because of misconfiguration </p>
-<pre><code>shareWorkDivisor:  4,
-</code></pre>
-<p>Which versions of announcements we will accept</p>
-<pre><code>annVersions: [1],
-</code></pre>
+<div class="highlight"><pre><span></span><code>shareWorkDivisor:  4,
+</code></pre></div>
+<p>Which versions of announcements we will accept
+<div class="highlight"><pre><span></span><code>annVersions: [1],
+</code></pre></div></p>
 <p>Request that ann miners mine announcements that are this many blocks old.</p>
 <p>Announcements contain a commitment of the most recent block hash but they need 3 blocks to "mature" before they can be used</p>
 <p>The point of this is so that PacketCrypt is about bandwidth, not latency.</p>
@@ -441,110 +433,110 @@ but increasing it will allow payment to be spread more evenly between block mine
 <li>3 Which means you are waiting for the announcements to mature before using them.</li>
 </ul>
 <p>If running your own AnnMiners, it is advisable to set this to 0, and add the <code>--mineold 3</code> to <strong><em>some</em></strong> of your AnnMiner startups on the CLI.</p>
-<p>This helps to keep a balance between keeping your pool as powerful as possible, along with having AnnMiners to help out in the case of a starvation</p>
-<pre><code>mineOldAnns:  0,
-</code></pre>
+<p>This helps to keep a balance between keeping your pool as powerful as possible, along with having AnnMiners to help out in the case of a starvation
+<div class="highlight"><pre><span></span><code>mineOldAnns:  0,
+</code></pre></div></p>
 <hr />
 <h3 id="configpaymaker">config.payMaker<a class="headerlink" href="#configpaymaker" title="Permanent link">&para;</a></h3>
-<p>How the miners should access the paymaker (external address), <strong><em>replace the url with your own.</em></strong></p>
-<pre><code>url:  'pool.pktpool.io',
-</code></pre>
-<p>Which port to run the paymaker on</p>
-<pre><code>port:  8081,
-</code></pre>
-<p>What address to bind to, set to localhost if proxying</p>
-<pre><code>host:  '::',
-</code></pre>
+<p>How the miners should access the paymaker (external address), <strong><em>replace the url with your own.</em></strong>
+<div class="highlight"><pre><span></span><code>url:  &#39;pool.pktpool.io&#39;,
+</code></pre></div></p>
+<p>Which port to run the paymaker on
+<div class="highlight"><pre><span></span><code>port:  8081,
+</code></pre></div></p>
+<p>What address to bind to, set to localhost if proxying
+<div class="highlight"><pre><span></span><code>host:  &#39;::&#39;,
+</code></pre></div></p>
 <p>Seconds between sending updates to pktd.
 If this set to zero, the payMaker will accept log uploads but will
 not send any changes of payout data to pktd.</p>
-<pre><code>updateCycle:  120,
-</code></pre>
-<p><code>updateCycle: 0</code> to disable</p>
-<p>How many seconds backward to keep history in memory</p>
-<pre><code>historyDepth:  60 * 60 * 24 * 30,
-</code></pre>
-<p>Maximum number of simultanious connections to accept before sending 500 errors</p>
-<pre><code>maxConnections:  200,
-</code></pre>
+<p><div class="highlight"><pre><span></span><code>updateCycle:  120,
+</code></pre></div>
+<code>updateCycle: 0</code> to disable</p>
+<p>How many seconds backward to keep history in memory
+<div class="highlight"><pre><span></span><code>historyDepth:  60 * 60 * 24 * 30,
+</code></pre></div></p>
+<p>Maximum number of simultanious connections to accept before sending 500 errors
+<div class="highlight"><pre><span></span><code>maxConnections:  200,
+</code></pre></div></p>
 <hr />
 <h4 id="anncompressor">annCompressor<a class="headerlink" href="#anncompressor" title="Permanent link">&para;</a></h4>
-<p>Store data in 1 minute aggregations</p>
-<pre><code>timespanMs:  1000 * 60,
-</code></pre>
-<p>Allow data to be submitted to any of the last 10 aggregations</p>
-<pre><code>slotsToKeepEvents:  10,
-</code></pre>
+<p>Store data in 1 minute aggregations
+<div class="highlight"><pre><span></span><code>timespanMs:  1000 * 60,
+</code></pre></div></p>
+<p>Allow data to be submitted to any of the last 10 aggregations
+<div class="highlight"><pre><span></span><code>slotsToKeepEvents:  10,
+</code></pre></div></p>
 <hr />
-<p>What fraction of the payout to pay to block miners (the rest will be paid to ann miners) (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)</p>
-<pre><code>blockPayoutFraction:  0.5,
-</code></pre>
+<p>What fraction of the payout to pay to block miners (the rest will be paid to ann miners) (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)
+<div class="highlight"><pre><span></span><code>blockPayoutFraction:  0.5,
+</code></pre></div></p>
 <p>What percent of the total winnings should be taken for pool management</p>
-<pre><code>poolFee:  0.40,
-</code></pre>
-<p>The address which should be paid the pool fee</p>
-<pre><code>poolFeeAddress:  &quot;pkt1qyc9dkhca7uc84zn3vlgd0h0fxr3twwn34qgeqe&quot;,
-</code></pre>
-<p>This constant will affect how far back into history we pay our announcement miners (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)</p>
-<pre><code>pplnsAnnConstantX:  0.125,
-</code></pre>
-<p>This constant will affect how far back into history we pay our block miners (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)</p>
-<pre><code>pplnsBlkConstantX:  2,
-</code></pre>
-<p>When there are not enough shares to fairly spread out the winnings, pay what is left over to this address.</p>
-<pre><code>defaultAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
-</code></pre>
+<div class="highlight"><pre><span></span><code>poolFee:  0.40,
+</code></pre></div>
+<p>The address which should be paid the pool fee
+<div class="highlight"><pre><span></span><code>poolFeeAddress:  &quot;pkt1qyc9dkhca7uc84zn3vlgd0h0fxr3twwn34qgeqe&quot;,
+</code></pre></div>
+This constant will affect how far back into history we pay our announcement miners (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)
+<div class="highlight"><pre><span></span><code>pplnsAnnConstantX:  0.125,
+</code></pre></div></p>
+<p>This constant will affect how far back into history we pay our block miners (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)
+<div class="highlight"><pre><span></span><code>pplnsBlkConstantX:  2,
+</code></pre></div></p>
+<p>When there are not enough shares to fairly spread out the winnings, pay what is left over to this address.
+<div class="highlight"><pre><span></span><code>defaultAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
+</code></pre></div></p>
 <p>When something goes wrong, direct pktd to send all coins here, if this is different
 from the defaultAddress then it is possible to account for and pay out to the miners
-later when the problem is fixed.</p>
-<pre><code>errorAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
-</code></pre>
+later when the problem is fixed.
+<div class="highlight"><pre><span></span><code>errorAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
+</code></pre></div></p>
 <h1 id="config-of-pooltoml">Config of pool.toml<a class="headerlink" href="#config-of-pooltoml" title="Permanent link">&para;</a></h1>
 <p><strong><em>Information:</em></strong> 
  - pool.example.toml is located at: <code>~/packetcrypt_rs/pool.example.toml</code>
  - You need to edit this file, then run: <code>~/packetcrypt_rs/pool.example.toml ~/packetcrypt_rs/pool.toml</code></p>
 <hr />
-<p>Password used by your paymaker to post logs for payment, the same as <code>config.paymakerHttpPasswd</code></p>
-<pre><code>paymaker_http_password = &quot;you'll want this to be a secret&quot;
-</code></pre>
+<p>Password used by your paymaker to post logs for payment, the same as <code>config.paymakerHttpPasswd</code>
+<div class="highlight"><pre><span></span><code>paymaker_http_password = &quot;you&#39;ll want this to be a secret&quot;
+</code></pre></div></p>
 <p>URL of the pool master, used for getting configuration and work, the same as:
-<strong><em>Replace the url with your own.</em></strong></p>
-<pre><code>master_url = &quot;http://pool.pktpool.io&quot;
-</code></pre>
+<strong><em>Replace the url with your own.</em></strong>
+<div class="highlight"><pre><span></span><code>master_url = &quot;http://pool.pktpool.io&quot;
+</code></pre></div></p>
 <h4 id="ann_handlerah">ann_handler.ah*<a class="headerlink" href="#ann_handlerah" title="Permanent link">&para;</a></h4>
 <p>You can have multiple ann_handlers, you can do this by defining each one such as:</p>
-<pre><code>[ann_handler.ah0]
+<p><div class="highlight"><pre><span></span><code>[ann_handler.ah0]
     &quot;parameters&quot;
 [ann_handler.ah1]
     &quot;parameters&quot;
-</code></pre>
-<p>These can all be in a single file to be used by each annhandler, when starting the annhandlers, you would start them with on each respective machine:</p>
-<pre><code>packetcrypt ah --config /path/to/config.toml ah0
+</code></pre></div>
+These can all be in a single file to be used by each annhandler, when starting the annhandlers, you would start them with on each respective machine:
+<div class="highlight"><pre><span></span><code>packetcrypt ah --config /path/to/config.toml ah0
 packetcrypt ah --config /path/to/config.toml ah1
-</code></pre>
-<p>Number of threads to dedicate to the AnnHandler</p>
-<pre><code>num_workers = 8
-</code></pre>
-<p>Length of the input queue, keeping this low will create back-pressure and prevent miners from posting too many announcements when the server is in fact overloaded</p>
-<pre><code>input_queue_len = 256
-</code></pre>
+</code></pre></div></p>
+<p>Number of threads to dedicate to the AnnHandler
+<div class="highlight"><pre><span></span><code>num_workers = 8
+</code></pre></div>
+Length of the input queue, keeping this low will create back-pressure and prevent miners from posting too many announcements when the server is in fact overloaded
+<div class="highlight"><pre><span></span><code>input_queue_len = 256
+</code></pre></div></p>
 <p>The public url of the annhandler, this should match what is set in your pool.js
-<strong><em>Replace the url with your own.</em></strong></p>
-<pre><code>public_url = &quot;http://ann1.pktpool.io/submit&quot;
-</code></pre>
-<p>Bind to this port</p>
-<pre><code>bind_port = &quot;198.51.100.3:80&quot;
-</code></pre>
-<p>Bind this port to the sprayer component</p>
-<pre><code>bind_pvt = &quot;10.0.16.3:6666&quot;
-</code></pre>
-<p>Set sprayer</p>
-<pre><code>spray_at = [&quot;239.0.1.1:6667&quot;]
+<strong><em>Replace the url with your own.</em></strong>
+<div class="highlight"><pre><span></span><code>public_url = &quot;http://ann1.pktpool.io/submit&quot;
+</code></pre></div>
+Bind to this port
+<div class="highlight"><pre><span></span><code>bind_port = &quot;198.51.100.3:80&quot;
+</code></pre></div>
+Bind this port to the sprayer component
+<div class="highlight"><pre><span></span><code>bind_pvt = &quot;10.0.16.3:6666&quot;
+</code></pre></div>
+Set sprayer
+<div class="highlight"><pre><span></span><code>spray_at = [&quot;239.0.1.1:6667&quot;]
 
 spray_workers = 8
-</code></pre>
+</code></pre></div></p>
 <p>For Machine 3 you should end up with something like this </p>
-<pre><code>[ann_handler.ah0]
+<div class="highlight"><pre><span></span><code>[ann_handler.ah0]
 
     block_miner_passwd = &quot;no one steals my anns&quot;
 
@@ -567,7 +559,7 @@ spray_workers = 8
     subscribe_to = []
 
     files_to_keep = 512
-</code></pre>
+</code></pre></div>
 <p>The same logic should be followed for Machine 4 and other handlers you may have. </p>
 <h4 id="note-to-bind-low-ports-with-non-root-user-run">NOTE: To bind low ports with non-root user run:<a class="headerlink" href="#note-to-bind-low-ports-with-non-root-user-run" title="Permanent link">&para;</a></h4>
 <p><code>sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)</code></p>
@@ -579,57 +571,56 @@ spray_workers = 8
 <li>PKTD needs to have downloaded the full chain first, you will know when the node is upto date when <strong><em>height</em></strong> is equal to the current block on the <a href="https://explorer.pkt.cash/">explorer</a> It can take 12+ hours to fully sync to the current block height</li>
 </ul>
 <h3 id="pktd">PKTD<a class="headerlink" href="#pktd" title="Permanent link">&para;</a></h3>
-<p><code>--rpcuser</code> and <code>--rpcpass</code> should match the values set in pool.js under config.rpc </p>
-<pre><code>
-./pktd/bin/pktd --rpcuser=XXX --rpcpass=XXX --miningaddr &lt;your PKT wallet address&gt;
-</code></pre>
+<p><code>--rpcuser</code> and <code>--rpcpass</code> should match the values set in pool.js under config.rpc 
+<div class="highlight"><pre><span></span><code>./pktd/bin/pktd --rpcuser=XXX --rpcpass=XXX --miningaddr &lt;your PKT wallet address&gt;
+</code></pre></div></p>
 <h2 id="machine-2_1"><em>Machine 2</em><a class="headerlink" href="#machine-2_1" title="Permanent link">&para;</a></h2>
 <h3 id="master">Master<a class="headerlink" href="#master" title="Permanent link">&para;</a></h3>
-<pre><code>node ./pool.js --master
-</code></pre>
+<div class="highlight"><pre><span></span><code>node ./pool.js --master
+</code></pre></div>
 <h3 id="paymaker">Paymaker<a class="headerlink" href="#paymaker" title="Permanent link">&para;</a></h3>
-<pre><code>node ./pool.js --payMaker
-</code></pre>
+<div class="highlight"><pre><span></span><code>node ./pool.js --payMaker
+</code></pre></div>
 <h3 id="blkhandlers">BlkHandler(s)<a class="headerlink" href="#blkhandlers" title="Permanent link">&para;</a></h3>
-<p>Launch the <strong>BlkHandler</strong> nodes, specify <code>--blk0</code> for the first <strong>BlkHandler</strong>, <code>--blk1</code> for the second, and so forth</p>
-<pre><code>cd PacketCrypt
+<p>Launch the <strong>BlkHandler</strong> nodes, specify <code>--blk0</code> for the first <strong>BlkHandler</strong>, <code>--blk1</code> for the second, and so forth
+<div class="highlight"><pre><span></span><code>cd PacketCrypt
 node ./pool.js --blk0
 node ./pool.js --blk1
-</code></pre>
+</code></pre></div></p>
 <h2 id="machine-3"><em>Machine 3</em><a class="headerlink" href="#machine-3" title="Permanent link">&para;</a></h2>
 <h3 id="annhandler">AnnHandler<a class="headerlink" href="#annhandler" title="Permanent link">&para;</a></h3>
-<pre><code>cd packetcrypt_rs
+<div class="highlight"><pre><span></span><code>cd packetcrypt_rs
 ./target/release/packetcrypt ah --config /path/to/pool.toml ah0
-</code></pre>
+</code></pre></div>
 <h2 id="machine-4"><em>Machine 4</em><a class="headerlink" href="#machine-4" title="Permanent link">&para;</a></h2>
 <h3 id="annhandler_1">AnnHandler<a class="headerlink" href="#annhandler_1" title="Permanent link">&para;</a></h3>
-<pre><code>cd packetcrypt_rs
+<div class="highlight"><pre><span></span><code>cd packetcrypt_rs
 ./targer/release/packetcrypt ah --config /path/to/pool.toml ah1
-</code></pre>
+</code></pre></div>
 <h2 id="machine-5-and-6"><em>Machine 5 and 6</em><a class="headerlink" href="#machine-5-and-6" title="Permanent link">&para;</a></h2>
 <h3 id="blkminer">BlkMiner<a class="headerlink" href="#blkminer" title="Permanent link">&para;</a></h3>
 <p><code>--threads</code> is the number of threads you want to dedicate to the Blkminer, the default is to use all available threads.
 <code>--paymentaddr</code> is the wallet you want your coins to be mined into, it is advisable to not use the electrum wallet for this.
 <code>--memorysizemb</code> is how much RAM you are allocating to block mining, Ideally you want to set as much as you can.
-<code>&lt;Master address of pool&gt;</code> is the masterUrl of your pool</p>
-<pre><code>cd packetcrypt_rs
+<code>&lt;Master address of pool&gt;</code> is the masterUrl of your pool
+<div class="highlight"><pre><span></span><code>cd packetcrypt_rs
 ./target/release/packetcrypt blk &lt;Master Address of Pool&gt; --paymentaddr &lt;your PKT wallet address&gt; --threads 80 --memorysizemb 665000 --handlerpass NoOneStealsMyAnns --subscribe 10.0.16.3:6666 --bind 0.0.0.0:6667 --mcast 239.0.1.1
-</code></pre>
+</code></pre></div></p>
 <h1 id="nginx-setup-for-allowing-external-annmining">NGINX Setup (For allowing external AnnMining)<a class="headerlink" href="#nginx-setup-for-allowing-external-annmining" title="Permanent link">&para;</a></h1>
 <h2 id="machine-2_2"><em>Machine 2</em><a class="headerlink" href="#machine-2_2" title="Permanent link">&para;</a></h2>
-<p>Update system and install Nginx</p>
-<pre><code>sudo apt update
+<p>Update system and install Nginx
+<div class="highlight"><pre><span></span><code>sudo apt update
 sudo apt install nginx
-</code></pre>
-<p>Unlink default nginx site</p>
-<pre><code>unlink /etc/nginx/sites-enabled/default
+</code></pre></div>
+Unlink default nginx site
+<div class="highlight"><pre><span></span><code>unlink /etc/nginx/sites-enabled/default
 cd /etc/nginx/sites-available
-</code></pre>
-<p>Create and edit the reverse-proxy.conf file</p>
-<pre><code>vim reverse-proxy.conf
-</code></pre>
+</code></pre></div>
+Create and edit the reverse-proxy.conf file
+<div class="highlight"><pre><span></span><code>vim reverse-proxy.conf
+</code></pre></div></p>
 <p>The config for the services:</p>
-<pre><code>server { 
+<p><div class="highlight"><pre><span></span><code>server { 
     listen 80; 
     listen [::]:80; 
     server_name &lt;masterURL&gt;; 
@@ -646,19 +637,19 @@ server {
         proxy_pass http://localhost:8081/; 
         } 
 }
-</code></pre>
-<p>Link new file to sites-enabled</p>
-<pre><code>ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
-</code></pre>
-<p>Remove default config</p>
-<pre><code>rm default
-</code></pre>
-<p>Check reverse proxy config is correct</p>
-<pre><code>nginx -t
-</code></pre>
-<p>Reload nginx to pick up config changes.</p>
-<pre><code>sudo systemctl reload nginx
-</code></pre>
+</code></pre></div>
+Link new file to sites-enabled
+<div class="highlight"><pre><span></span><code>ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+</code></pre></div>
+Remove default config
+<div class="highlight"><pre><span></span><code>rm default
+</code></pre></div>
+Check reverse proxy config is correct
+<div class="highlight"><pre><span></span><code>nginx -t
+</code></pre></div>
+Reload nginx to pick up config changes.
+<div class="highlight"><pre><span></span><code>sudo systemctl reload nginx
+</code></pre></div></p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <li class="last-updated-holder displayDate loading">
