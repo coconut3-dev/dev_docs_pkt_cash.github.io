@@ -1,0 +1,7 @@
+#main img {
+    max-width: 50%;
+}
+#main pre {
+    max-width: 50vw;
+    overflow: auto;
+}
