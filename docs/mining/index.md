@@ -151,9 +151,7 @@ pool_1 is the pool running the highest difficulty. If you notice problems, you c
 7. Enter the command: ```$ git clone https://github.com/cjdelisle/packetcrypt_rs```
 8. Enter the command: ```$ cd packetcrypt_rs```
 9. Enter the command: ```$ ~/.cargo/bin/cargo build --release```
-10. Enter Command: ```$ packetcrypt``` 
-```$ packetcrypt ann -p [your PKT Wallet Address] [pool 1] [pool 2] [pool 3] [pool 4]```
-
+10. Enter the command: ```$ ./target/release/packetcrypt ann -p [your PKT Wallet Address] [pool 1] [pool 2] [pool 3] [pool 4] ```
 
 ## Choosing Pools to mine in
 

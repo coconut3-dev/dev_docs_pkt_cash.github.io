@@ -13,7 +13,7 @@ setup(
     include_package_data=True,
     entry_points={
         "mkdocs.themes": [
-            "pkt = pkt",
+            "moonstone = mkdocs_moonstone",
         ]
     },
     zip_safe=False,

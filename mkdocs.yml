@@ -4,14 +4,19 @@ site_author: Coconut3
 site_description: "Dev environment"
 repo_url: "https://github.com/coconut3-dev/dev_docs_pkt_cash.github.io"
 
+# theme:
+#   name: null
+#   custom_dir: pkt
+#   colorscheme: github
+#   highlightjs: true
+
 theme:
-  name: null
-  custom_dir: pkt-docs
-  colorscheme: github
-  highlightjs: true
+  name: moonstone
+  custom_dir: custom_theme
 
 nav:
   - Home: index.md
+  - PKT Documentation: documentation.md
   - PKT Electrum: electrum/index.md
   - Mining: mining/index.md
   - Pool Operation: mining/pool_setup_guide.md
@@ -30,3 +35,6 @@ markdown_extensions:
   - toc:
       permalink: true
   - attr_list
+
+extra_css:
+    - css/extra.css
