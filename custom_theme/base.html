@@ -69,12 +69,6 @@
     {% include "main-nav.html" %}
     
     {%- set main_content %}
-
-    {% if page and page.is_homepage %}
-      <div class="row">
-        <div id="main" class="{%- if config.theme.fluid_layout -%}col{%- else -%}col-md-7{%- endif -%}" role="main">{% include "content.html" %}</div>
-      </div>
-    {% else %}
     <div class="row">
       <div id="sidebar-nav" class="sidebar col-md-3">{% include "side-nav.html" %}</div>
       <div id="main" class="{%- if config.theme.fluid_layout -%}col{%- else -%}col-md-7{%- endif -%}" role="main">{% include "content.html" %}</div>
@@ -82,7 +76,6 @@
         <nav id="toc" data-toggle="toc" class="sticky-top sticky-offset"></nav>
       </div>
     </div>
-    {% endif %}
     {%- endset %}
     
     {%- block content %}

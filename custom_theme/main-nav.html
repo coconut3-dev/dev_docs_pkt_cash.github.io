@@ -1,8 +1,8 @@
 <nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top" role="navigation">
   
     {%- block site_name %}
-    <a class="navbar-brand" href="{{ nav.homepage.url|url }}">
-      {{ config.site_name }}
+    <a class="navbar-brand" href="{{ nav.homepage.url|url }}" title="{{ config.site_name }}">
+      <img src="{{'./assets/logo-dark.svg'|url}}" alt="{{ config.site_name }}">
     </a>
     {%- endblock %}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,11 +11,44 @@
     <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
       {%- block site_nav %}
       <ul class="nav navbar-nav mr-auto mx-auto">
-        <li class="main-item">
-          <a class="nav-link" href="{{ nav.homepage.url|url }}">Home</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/mine" target="_blank">Mine</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/utility" target="_blank">Utility</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-network" target="_blank">PKT Network</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-cash" target="_blank">PKT Cash</a></li>
+            <li><a class="dropdown-item" href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank">PKT Deck</a></li>
+          </ul>
         </li>
-        <li class="main-item">
-          <a class="nav-link" href="{{ nav.homepage.url|url }}/documentation/">Documentation</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Develop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/developer-central" target="_blank">Developer Central</a></li>
+            <li><a class="dropdown-item" href="https://docs.pkt.cash/" target="_blank">Technical Docs</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/roadmap" target="_blank">Roadmap</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank">Yellowpaper</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank">Whitepaper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/network-steward" target="_blank">Network Steward</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/wallet" target="_blank">Wallets</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/ecosystem" target="_blank">Ecosystem</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cryptoeconomics" target="_blank">Cryptoeconomics</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cjdns" target="_blank">Cjdns</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://packetscan.io/" target="_blank">Explorer</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/community" target="_blank">Community</a></li>
+            <li><a class="dropdown-item" href="https://crypto.pkt.cash/" target="_blank">Blog</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/brand" target="_blank">Media Kit</a></li>
+          </ul>
         </li>
       </ul>
       {%- endblock %}

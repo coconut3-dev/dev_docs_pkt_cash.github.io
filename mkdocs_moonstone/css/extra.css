@@ -1,3 +1,70 @@
+/***************************************************
+* Base
+***************************************************/
+
+/***************************************************
+* Header
+***************************************************/
+
+/***************************************************
+* Footer
+***************************************************/
+footer {
+    padding-top: 3.75rem;
+    padding-bottom: 4.0625rem;
+    background-color: #000;
+    color: hsla(0, 0%, 100%, .5);
+    position: relative;
+    z-index: 3;
+}
+footer .c-footer__logo_social {
+    padding: 2.8125rem 0 3.25rem;
+}
+footer .c-footer__logo_social .c-footer__menu-item a span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 1.25rem;
+    background-color: hsla(0, 0%, 100%, .15);
+    border-radius: 3.125rem;
+    display: block;
+    text-align: center;
+}
+footer .c-footer__logo_social .c-footer__menu-item a span img {
+    width: 24px;
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    vertical-align: middle;
+}
+footer .col > h4 {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: hsla(0, 0%, 100%, .5);
+    font-weight: bold;
+}
+footer .col > a {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: hsla(0, 0%, 100%, .5);
+    display: block;
+}
+/***************************************************
+* Sidebar Main
+***************************************************/
+#sidebar-nav {
+    background-color: #fff;
+    color: #00052f;
+}
+/***************************************************
+* Sidebar Sub
+***************************************************/
+
+/***************************************************
+* Content
+***************************************************/
 #main img {
     max-width: 50%;
 }

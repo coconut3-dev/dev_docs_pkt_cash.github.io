@@ -1,4 +1,3 @@
-
 # PKT Code of Conduct:
 
   1) We are here to talk about PKT. If it's not PKT related don't post it here.

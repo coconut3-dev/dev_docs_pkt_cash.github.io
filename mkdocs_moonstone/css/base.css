@@ -48,7 +48,7 @@
 body {
     font-family: "Lato",Helvetica,Arial,sans-serif;
     font-weight: 200;
-    color: #222;
+    color: #000;
     background-color: #fff;
 }
 
@@ -76,7 +76,7 @@ h5:hover .headerlink {
     margin-top: 30px;
 }
 .h3,h3 {
-    color: #585858;
+    color: #000;
     margin-top: 30px;
 }
 .h4,h4 {
@@ -104,7 +104,7 @@ code.hljs {
 }
 
 a {
-    color: #0073ae;
+    color: #656869;
 }
 
 a:visited {
