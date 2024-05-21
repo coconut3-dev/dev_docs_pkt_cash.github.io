@@ -2,77 +2,242 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/PKT_FAQ/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/code_of_conduct/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/commercial/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/communication/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/documentation/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/index_bk/</loc>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/useful_tools/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wrapped_pkt/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/adv_learning/buy-pkt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/adv_learning/cryptoeconomics/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/adv_learning/pktd-full-node/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/adv_learning/sell-pkt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/adv_learning/swap-pkt-wrapped-pkt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/community/classifieds/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/community/ethica-communication-guidelines/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/community/press-media-assets/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/building-on-pkt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/cjdns/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/cloud-isp/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/edge-points/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/packetcrypt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/pkt-lightning-deamon/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/pkt-vpn/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/tokenstrike/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/dev/wiif-sharing/</loc>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/electrum/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/learn/network-steward/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/learn/packetcrypt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/learn/pkt-cash/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/learn/pkt-network/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/learn/pkt/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/learn/wpkt/</loc>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/mining/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/mining/pool_setup_guide/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktd/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktd/migrating_from_electrum/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktd/pktwallet/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktwalletgui/</loc>
-         <lastmod>2024-05-20</lastmod>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/start_mining/announcement-mining/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/start_mining/intro/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/start_mining/pkt-mining-pool/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/install-from-seed/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/install-pkt-electrum/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/pkt-cli-wallet/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/pkt-wallet-setup/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/pkt-world-wallet/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/pkt-zulu-wallet/</loc>
+         <lastmod>2024-05-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/wallet_setup/wallet-faq/</loc>
+         <lastmod>2024-05-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

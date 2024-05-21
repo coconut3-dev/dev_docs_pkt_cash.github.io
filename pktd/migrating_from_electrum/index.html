@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/pktd/migrating_from_electrum/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
     
-    <title>Electrum Import - PKT Documentation</title>
+    <title>Migrating from Electrum to PKTWallet - PKT Documentation</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
@@ -37,19 +37,52 @@
   
   <body class="" data-spy="scroll" data-target="#toc">
     <nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top" role="navigation">
-    <a class="navbar-brand" href="../..">
-      PKT Documentation
+    <a class="navbar-brand" href="../.." title="PKT Documentation">
+      <img src="../../assets/logo-dark.svg" alt="PKT Documentation">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
       <ul class="nav navbar-nav mr-auto mx-auto">
-        <li class="main-item">
-          <a class="nav-link" href="../..">Home</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/mine" target="_blank">Mine</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/utility" target="_blank">Utility</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-network" target="_blank">PKT Network</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-cash" target="_blank">PKT Cash</a></li>
+            <li><a class="dropdown-item" href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank">PKT Deck</a></li>
+          </ul>
         </li>
-        <li class="main-item">
-          <a class="nav-link" href="../../documentation/">Documentation</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Develop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/developer-central" target="_blank">Developer Central</a></li>
+            <li><a class="dropdown-item" href="https://docs.pkt.cash/" target="_blank">Technical Docs</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/roadmap" target="_blank">Roadmap</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank">Yellowpaper</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank">Whitepaper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/network-steward" target="_blank">Network Steward</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/wallet" target="_blank">Wallets</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/ecosystem" target="_blank">Ecosystem</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cryptoeconomics" target="_blank">Cryptoeconomics</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cjdns" target="_blank">Cjdns</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://packetscan.io/" target="_blank">Explorer</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/community" target="_blank">Community</a></li>
+            <li><a class="dropdown-item" href="https://crypto.pkt.cash/" target="_blank">Blog</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/brand" target="_blank">Media Kit</a></li>
+          </ul>
         </li>
       </ul>
       
@@ -64,11 +97,9 @@
 </nav>
     <div id="content"class="container-fluid">
       
-
-    
     <div class="row">
-      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md navbar-dark" role="navigation">
-  <a class="navbar-brand d-block d-md-none d-xl-none" href="#"><i class="fa fa-home fa-fw"></i> Table of Contents</a>
+      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md" role="navigation">
+  <a class="navbar-brand d-block d-md-none d-xl-none" href="#"><i class="fa fa-book fa-fw"></i> Documentation</a>
   <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#sidebar-navbar-collapse" aria-controls="sidebar-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -78,44 +109,181 @@
       <li >
         <a class="nav-link" href="../..">Home</a>
       </li>
-      <li >
-        <a class="nav-link" href="../../documentation/">PKT Documentation</a>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#learn">
+        <!--<a href="#" class="nav-link">Learn <b class="caret"></b></a>-->
+        <span class="section-title">Learn</span>
+        <ul id="learn">
+          
+<li>
+    <a href="../../learn/pkt/" class="">What is PKT?</a>
+</li>
+          
+<li>
+    <a href="../../learn/packetcrypt/" class="">What is PacketCrypt?</a>
+</li>
+          
+<li>
+    <a href="../../learn/pkt-cash/" class="">What is PKT Cash?</a>
+</li>
+          
+<li>
+    <a href="../../learn/wpkt/" class="">What is WPKT?</a>
+</li>
+          
+<li>
+    <a href="../../learn/pkt-network/" class="">What is the PKT Network?</a>
+</li>
+          
+<li>
+    <a href="../../learn/network-steward/" class="">What is the Network Steward?</a>
+</li>
+          
+<li>
+    <a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" class="">Whitepapers</a>
+</li>
+        </ul>
       </li>
-      <li >
-        <a class="nav-link" href="../../electrum/">PKT Electrum</a>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#wallet-setup">
+        <!--<a href="#" class="nav-link">Wallet Setup <b class="caret"></b></a>-->
+        <span class="section-title">Wallet Setup</span>
+        <ul id="wallet-setup">
+          
+<li>
+    <a href="../../wallet_setup/pkt-wallet-setup/" class="">How to setup a PKT Wallet</a>
+</li>
+          
+<li>
+    <a href="../../wallet_setup/install-from-seed/" class="">Installing from Seed</a>
+</li>
+          
+<li>
+    <a href="../../wallet_setup/install-pkt-electrum/" class="">Installing PKT Electrum (Mac/Windows)</a>
+</li>
+          
+<li>
+    <a href="../../wallet_setup/pkt-world-wallet/" class="">Installing PKT.World Wallet (Mac/Windows)</a>
+</li>
+          
+<li>
+    <a href="../../wallet_setup/pkt-zulu-wallet/" class="">Installing PKT Zulu Wallet (Mac)</a>
+</li>
+          
+<li>
+    <a href="../../wallet_setup/pkt-cli-wallet/" class="">Installing PKT CLI Wallet (Mac/Windows/Linux)</a>
+</li>
+          
+<li>
+    <a href="../../wallet_setup/wallet-faq/" class="">Wallet FAQ</a>
+</li>
+        </ul>
       </li>
-      <li >
-        <a class="nav-link" href="../../mining/">Mining</a>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#start-mining">
+        <!--<a href="#" class="nav-link">Start Mining <b class="caret"></b></a>-->
+        <span class="section-title">Start Mining</span>
+        <ul id="start-mining">
+          
+<li>
+    <a href="../../start_mining/intro/" class="">Intro to PKT Mining</a>
+</li>
+          
+<li>
+    <a href="../../start_mining/announcement-mining/" class="">How to Start Announcement Mining</a>
+</li>
+          
+<li>
+    <a href="../../start_mining/pkt-mining-pool/" class="">How to Setup a PKT Mining Pool</a>
+</li>
+        </ul>
       </li>
-      <li >
-        <a class="nav-link" href="../../mining/pool_setup_guide/">Pool Operation</a>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#developers">
+        <!--<a href="#" class="nav-link">Developers <b class="caret"></b></a>-->
+        <span class="section-title">Developers</span>
+        <ul id="developers">
+          
+<li>
+    <a href="../../dev/building-on-pkt/" class="">Building on PKT</a>
+</li>
+          
+<li>
+    <a href="../../dev/packetcrypt/" class="">PacketCrypt</a>
+</li>
+          
+<li>
+    <a href="../../dev/pkt-vpn/" class="">PKT VPN</a>
+</li>
+          
+<li>
+    <a href="../../dev/wiif-sharing/" class="">Wifi Sharing</a>
+</li>
+          
+<li>
+    <a href="../../dev/pkt-lightning-deamon/" class="">PKT Lightning Daemon</a>
+</li>
+          
+<li>
+    <a href="../../dev/tokenstrike/" class="">TokenStrike</a>
+</li>
+          
+<li>
+    <a href="../../dev/cjdns/" class="">Cjdns</a>
+</li>
+          
+<li>
+    <a href="../../dev/edge-points/" class="">Edge Points</a>
+</li>
+          
+<li>
+    <a href="../../dev/cloud-isp/" class="">Cloud ISPs</a>
+</li>
+        </ul>
       </li>
-      <li >
-        <a class="nav-link" href="../">Pktd</a>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#advanced-learning">
+        <!--<a href="#" class="nav-link">Advanced Learning <b class="caret"></b></a>-->
+        <span class="section-title">Advanced Learning</span>
+        <ul id="advanced-learning">
+          
+<li>
+    <a href="../../adv_learning/cryptoeconomics/" class="">Cryptoeconomics</a>
+</li>
+          
+<li>
+    <a href="../../adv_learning/pktd-full-node/" class="">How to Run a Pktd Full Node</a>
+</li>
+          
+<li>
+    <a href="../../adv_learning/swap-pkt-wrapped-pkt/" class="">How to Swap PKT and Wrapped PKT</a>
+</li>
+          
+<li>
+    <a href="../../adv_learning/buy-pkt/" class="">How to Buy PKT?</a>
+</li>
+          
+<li>
+    <a href="../../adv_learning/sell-pkt/" class="">How to Sell PKT?</a>
+</li>
+        </ul>
       </li>
-      <li >
-        <a class="nav-link" href="../pktwallet/">PKTWallet</a>
-      </li>
-      <li >
-        <a class="nav-link" href="../../wrapped_pkt/">Wrapped PKT</a>
-      </li>
-      <li class="active">
-        <a class="nav-link" href="./">Electrum Import</a>
-      </li>
-      <li >
-        <a class="nav-link" href="../../PKT_FAQ/">FAQ</a>
-      </li>
-      <li >
-        <a class="nav-link" href="../../code_of_conduct/">Code of Conduct</a>
-      </li>
-      <li >
-        <a class="nav-link" href="../../commercial/">Commercial</a>
-      </li>
-      <li >
-        <a class="nav-link" href="../../useful_tools/">Useful Tools</a>
-      </li>
-      <li >
-        <a class="nav-link" href="../../communication/">Communication</a>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#community">
+        <!--<a href="#" class="nav-link">Community <b class="caret"></b></a>-->
+        <span class="section-title">Community</span>
+        <ul id="community">
+          
+<li>
+    <a href="../../code_of_conduct/" class="">Code of Conduct</a>
+</li>
+          
+<li>
+    <a href="../../community/ethica-communication-guidelines/" class="">Ethical Communication Guidelines</a>
+</li>
+          
+<li>
+    <a href="../../community/classifieds/" class="">Classifieds</a>
+</li>
+          
+<li>
+    <a href="../../community/press-media-assets/" class="">Press & Media Assets</a>
+</li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -127,7 +295,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     
-    <li class="breadcrumb-item active" aria-current="page">Electrum Import</li>
+    <li class="breadcrumb-item active" aria-current="page">Migrating from Electrum to PKTWallet</li>
   </ol>
 </nav>
 
@@ -203,30 +371,68 @@ When you are resyncing you should see log lines like the following:</p>
         <nav id="toc" data-toggle="toc" class="sticky-top sticky-offset"></nav>
       </div>
     </div>
-    
     </div><footer class="col-md-12">
   <nav class="container">
     <div class="row">
-      <div class="col-6">
+      <div class="col-5">
 		<a class="navbar-brand" href="../..">
-		  PKT Documentation
+          <img src="../../assets/logo.svg" alt="PKT Documentation">
 		</a>
+		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-none d-md-flex">
+			<li class="c-footer__menu-item">
+				<a href="https://pkt.chat" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/pkt-chat.svg" alt="pkt.chat" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://www.youtube.com/c/PKTCash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/youtube.svg" alt="Youtube" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://www.instagram.com/pktcash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/instagram.svg" alt="Instagram" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://twitter.com/pktcash" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/x.svg" alt="Twitter" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://discord.gg/bjJutHm9CN" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/discord.svg" alt="Discord" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://github.com/pkt-cash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/github.svg" alt="Github" width="24"></span></a>
+			</li>
+		</ul>
 		<a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">©2024 PKT Cash | Privacy Policy</a>
       </div>
-      <div class="col-6">
-		<ul class="nav flex-row ml-md-auto d-none d-md-flex pull-right">
-		<li><a class="nav-link footer-image-link footer-image-link-facebook" href="#">
-			<i class="fa fa-facebook"></i></a></li>
-		<li><a class="nav-link footer-image-link footer-image-link-twitter" href="#">
-			<i class="fa fa-twitter"></i></a></li>
-		<li><a class="nav-link footer-image-link footer-image-link-linkedin" href="#">
-			<i class="fa fa-linkedin"></i></a></li>
-		<li><a class="nav-link footer-image-link footer-image-link-youtube" href="#">
-			<i class="fa fa-youtube"></i></a></li>
-		</ul>
-      </div>
+		<div class="col">
+			<h4>Learn</h4>
+			<a href="https://pkt.cash/mine" title="Mine" target="_blank">Mine</a>
+			<a href="https://pkt.cash/utility" title="Utility" target="_blank">Utility</a>
+			<a href="https://pkt.cash/pkt-network" title="PKT Network" target="_blank">PKT Network</a>
+			<a href="https://pkt.cash/pkt-cash" title="PKT Cash" target="_blank">PKT Cash</a>
+			<a href="https://docsend.com/view/ayf5d3tz5rymn8fv" title="PKT Deck" target="_blank">PKT Deck</a>
+		</div>
+		<div class="col">
+			<h4>Develop</h4>
+			<a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" title="Technical Docs" target="_blank">Technical Docs</a>
+			<a href="https://pkt.cash/roadmap" title="Roadmap" target="_blank">Roadmap</a>
+			<a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" title="Yellowpaper" target="_blank">Yellowpaper</a>
+			<a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" title="Whitepaper" target="_blank">Whitepaper</a>
+		</div>
+		<div class="col">
+			<h4>Network</h4>
+			<a href="https://packetscan.io/" title="Explorer" target="_blank">Explorer</a>
+			<a href="https://pkt.cash/wallet" title="Wallets" target="_blank">Wallets</a>
+			<a href="https://pkt.cash/network-steward" title="Network Steward" target="_blank">Network Steward</a>
+			<a href="https://pkt.cash/ecosystem" title="Ecosystem" target="_blank">Ecosystem</a>
+			<a href="https://github.com/cjdelisle/cjdns" title="Cjdns" target="_blank">Cjdns</a>
+		</div>
+		<div class="col">
+			<h4>Explore</h4>
+			<a href="https://pkt.cash/community" title="Community" target="_blank">Community</a>
+			<a href="https://crypto.pkt.cash/" title="Blog" target="_blank">Blog</a>
+			<a href="https://pkt.cash/trademark" title="Trademark" target="_blank">Trademark</a>
+			<a href="https://pkt.cash/brand" title="Brand" target="_blank">Brand</a>
+		</div>
   </nav>
 </footer>
+
     <script>
       var base_url = "../..",
           shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
