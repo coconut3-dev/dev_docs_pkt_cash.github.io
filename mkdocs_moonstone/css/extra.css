@@ -5,7 +5,14 @@
 /***************************************************
 * Header
 ***************************************************/
-
+#mainnav {
+    z-index: 99;
+}
+@media screen and (max-width:767px) {
+    #mainnav .navbar .navbar-brand img {
+        max-width: 115px;
+    }
+}
 /***************************************************
 * Footer
 ***************************************************/
@@ -15,7 +22,6 @@ footer {
     background-color: #000;
     color: hsla(0, 0%, 100%, .5);
     position: relative;
-    z-index: 3;
 }
 footer .c-footer__logo_social {
     padding: 2.8125rem 0 3.25rem;
@@ -51,6 +57,27 @@ footer .col > a {
     color: hsla(0, 0%, 100%, .5);
     display: block;
 }
+@media screen and (max-width:767px) {
+    footer .navbar-brand img {
+        max-width: 115px;
+    }
+    footer .col {
+        width:50%;
+    }
+    footer .c-footer__logo_social .c-footer__menu-item a span {
+        width: 36px;
+        height: 36px;
+        line-height: 32px;
+        margin-right: 15px;
+    }
+    footer .c-footer__logo_social .c-footer__menu-item a span img {
+        width: 22px;
+        height: 18px;
+    }
+    footer .col > h4 {
+        min-width: 100px;
+    }
+}
 /***************************************************
 * Sidebar Main
 ***************************************************/
@@ -64,7 +91,11 @@ footer .col > a {
 /***************************************************
 * Sidebar Sub
 ***************************************************/
-
+@media screen and (max-width:767px) {
+    #sidebar-toc {
+        display: none;
+    }
+}
 /***************************************************
 * Content
 ***************************************************/
@@ -74,4 +105,9 @@ footer .col > a {
 #main pre {
     max-width: 50vw;
     overflow: auto;
+}
+@media screen and (max-width:1280px) {
+    #main p {
+        word-break: break-all;
+    }
 }

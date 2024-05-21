@@ -16,6 +16,7 @@ plugins:
 theme:
   name: moonstone
   custom_dir: custom_theme
+  fluid_layout: false
 
 nav:
   - Home: index.md

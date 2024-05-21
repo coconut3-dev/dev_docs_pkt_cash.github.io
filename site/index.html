@@ -36,7 +36,7 @@
   </head>
   
   <body class="homepage " data-spy="scroll" data-target="#toc">
-    <nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top" role="navigation">
+    <nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top py-2" role="navigation">
     <a class="navbar-brand" href="." title="PKT Documentation">
       <img src="assets/logo-dark.svg" alt="PKT Documentation">
     </a>
@@ -44,7 +44,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav mr-auto mx-auto">
+      <ul class="nav navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
           <ul class="dropdown-menu">
@@ -95,10 +95,10 @@
       </ul>
     </div>
 </nav>
-    <div id="content"class="container-fluid">
+    <div id="content"class="container">
       
     <div class="row">
-      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md" role="navigation">
+      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md navbar-light" role="navigation">
   <a class="navbar-brand d-block d-md-none d-xl-none" href="#"><i class="fa fa-book fa-fw"></i> Documentation</a>
   <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#sidebar-navbar-collapse" aria-controls="sidebar-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -289,7 +289,7 @@
   </div>
 </nav>
 </div>
-      <div id="main" class="col" role="main">
+      <div id="main" class="col-md-7" role="main">
 
 
 <nav aria-label="breadcrumb">
@@ -305,15 +305,15 @@
 <h2 id="wallet-setup">Wallet setup<a class="headerlink" href="#wallet-setup" title="Permanent link">&para;</a></h2>
 <p>There are several wallets which you can choose from, the easiest to set up are</p>
 <ul>
-<li><a href="./electrum">PKT Electrum</a> which has a Graphical UI and supports Windows, Mac and Linux.</li>
-<li><a href="./pktwalletgui">PKT Wallet</a> which has a Graphical UI and supports MacOS and works great with miners.</li>
-<li><a href="https://www.pkt.world/wallet">Pkt.world Wallet</a> which has a Graphical UI for Windows, works with miners and includes a built-in miner.</li>
+<li><a href="./wallet_setup/install-pkt-electrum">PKT Electrum</a> which has a Graphical UI and supports Windows, Mac and Linux.</li>
+<li><a href="./wallet_setup/pkt-wallet-setup">PKT Wallet</a> which has a Graphical UI and supports MacOS and works great with miners.</li>
+<li><a href="./wallet_setup/pkt-world-wallet">Pkt.world Wallet</a> which has a Graphical UI for Windows, works with miners and includes a built-in miner.</li>
 </ul>
-<p>You can also setup <a href="./pktd/pktwallet">PKT Wallet</a> which is command line only but has greater
+<p>You can also setup <a href="./wallet_setup/pkt-wallet-setup">PKT Wallet</a> which is command line only but has greater
 scalability and privacy features.</p>
 <h2 id="mining">Mining<a class="headerlink" href="#mining" title="Permanent link">&para;</a></h2>
 <p>PKT is mined using the PacketCrypt bandwidth hard mining algorithm. You can learn how
-to mine on the <a href="./mining">Mining</a> page.</p>
+to mine on the <a href="./start_mining/intro/">Mining</a> page.</p>
 <h2 id="running-a-pktd-instance">Running a pktd instance<a class="headerlink" href="#running-a-pktd-instance" title="Permanent link">&para;</a></h2>
 <p>You can setup a pktd instance using the instructions on <a href="./pktd">pktd</a>.</p>
 <h2 id="help-and-community">Help and Community<a class="headerlink" href="#help-and-community" title="Permanent link">&para;</a></h2>
@@ -343,11 +343,11 @@ join us on the <a href="https://pkt.chat/">PKT Chat</a> project chat.</p>
     </div><footer class="col-md-12">
   <nav class="container">
     <div class="row">
-      <div class="col-5">
+      <div class="col-md-5 col-sm-12">
 		<a class="navbar-brand" href=".">
           <img src="assets/logo.svg" alt="PKT Documentation">
 		</a>
-		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-none d-md-flex">
+		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-md-flex">
 			<li class="c-footer__menu-item">
 				<a href="https://pkt.chat" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="assets/pkt-chat.svg" alt="pkt.chat" width="24"></span></a>
 			</li>
@@ -479,5 +479,5 @@ join us on the <a href="https://pkt.chat/">PKT Chat</a> project chat.</p>
 
 <!--
     MkDocs version : 1.6.0
-    Build Date UTC : 2024-05-21 19:06:56.033641+00:00
+    Build Date UTC : 2024-05-21 21:04:37.236702+00:00
 -->

@@ -2,13 +2,13 @@
   {%- block footer %}
   <nav class="container">
     <div class="row">
-      <div class="col-5">
+      <div class="col-md-5 col-sm-12">
 		{%- block site_name %}
 		<a class="navbar-brand" href="{{ nav.homepage.url|url }}">
           <img src="{{'./assets/logo.svg'|url}}" alt="{{ config.site_name }}">
 		</a>
 		{%- endblock %}
-		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-none d-md-flex">
+		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-md-flex">
 			<li class="c-footer__menu-item">
 				<a href="https://pkt.chat" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/pkt-chat.svg'|url}}" alt="pkt.chat" width="24"></span></a>
 			</li>
