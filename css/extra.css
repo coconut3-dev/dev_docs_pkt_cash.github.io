@@ -3,33 +3,33 @@
 ***************************************************/
 @font-face {
     font-family: "Inter-Regular";
-    src: url("./fonts/Inter-Regular.woff2") format("woff2"),
-    url("./fonts/Inter-Regular.woff") format("woff"),
-    url("./fonts/Inter-Regular.ttf") format('truetype');
+    src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff"),
+    url("../fonts/Inter-Regular.ttf") format('truetype');
     preload: true;
     font-weight:400;
 }
 @font-face {
     font-family: "Inter-Medium";
-    src: url("./fonts/Inter-Medium.woff2") format("woff2"),
-    url("./fonts/Inter-Medium.woff") format("woff"),
-    url("./fonts/Inter-Medium.ttf") format('truetype');
+    src: url("../fonts/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/Inter-Medium.woff") format("woff"),
+    url("../fonts/Inter-Medium.ttf") format('truetype');
     preload: true;
     font-weight:500;
 }
 @font-face {
     font-family: "Inter-SemiBold";
-    src: url("./fonts/Inter-SemiBold.woff2") format("woff2"),
-    url("./fonts/Inter-SemiBold.woff") format("woff"),
-    url("./fonts/Inter-SemiBold.ttf") format('truetype');
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("../fonts/Inter-SemiBold.woff") format("woff"),
+    url("../fonts/Inter-SemiBold.ttf") format('truetype');
     preload: true;
     font-weight:600;
 }
 @font-face {
     font-family: "Inter-Bold";
-    src: url("./fonts/Inter-Bold.woff2") format("woff2"),
-    url("./fonts/Inter-Bold.woff") format("woff"),
-    url("./fonts/Inter-Bold.ttf") format('truetype');
+    src: url("../fonts/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/Inter-Bold.woff") format("woff"),
+    url("../fonts/Inter-Bold.ttf") format('truetype');
     preload: true;
     font-weight:700;
 }
@@ -39,10 +39,18 @@
 body {
     font-family: "Inter-Regular", sans-serif;
     background-color: #00052f;
-    color:#fff;
+    color:silver;
 }
 h1,h2,h3,.h1,.h2,.h3 {
     font-family: "Inter-Bold", sans-serif;
+}
+.h3, h3 {
+    color: #fff;
+}
+pre code {
+    font-size: 87.5%;
+    color: #e83e8c;
+    word-break: break-word;
 }
 /***************************************************
 * Header
@@ -60,13 +68,27 @@ h1,h2,h3,.h1,.h2,.h3 {
 #mainnav #mainnav-navbar-collapse > .navbar-nav > .nav-item > a {
     color: #fff;
     font-size: 1rem;
-    line-height: 1.25rem;
+    line-height: 1rem;
     padding: 1.25rem;
     font-family: "Inter-SemiBold", sans-serif;
 }
+#mainnav .navbar-brand img {
+    max-width: 125px;
+}
 @media screen and (max-width:767px) {
-    #mainnav .navbar .navbar-brand img {
-        max-width: 115px;
+    #mainnav {
+        background: rgba(0, 5, 47, .5);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+    #mainnav .navbar-brand img {
+        max-width: 4.6875rem;
+    }
+    #mainnav .navbar-toggler .navbar-toggler-icon {
+        color: #fff;
+    }
+    #mainnav .navbar-toggler .navbar-toggler-icon i {
+        line-height: 30px;
     }
 }
 /***************************************************
@@ -160,6 +182,16 @@ footer .col > a {
 #sidebar-nav .navbar-expand-md .navbar-nav .nav-link:before {
     display: none;
 }
+@media screen and (max-width:767px) {
+    #sidebar-nav .navbar-toggler {
+        margin: 0;
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        z-index: 999;
+        border: 0;
+    }
+}
 /***************************************************
 * Sidebar Sub
 ***************************************************/
@@ -170,14 +202,21 @@ footer .col > a {
     top: 100px;
 }
 #sidebar-toc nav[data-toggle=toc] .nav>li>a {
-    color: #fff;
-    opacity: .5;
+    color: silver;
     font-size: 16px;
 }
+#sidebar-toc nav[data-toggle=toc] .nav-link.active, 
+#sidebar-toc nav[data-toggle=toc] .nav-link.active:focus, 
+#sidebar-toc nav[data-toggle=toc] .nav-link.active:hover,
 #sidebar-toc nav[data-toggle=toc] .nav>li>a:focus,
 #sidebar-toc nav[data-toggle=toc] .nav>li>a:hover {
     border-left: 1px solid #fff;
-    opacity: 1;
+    color:#fff;
+}
+#sidebar-toc #toc > h4 {
+    font-family: "Inter-SemiBold";
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 @media screen and (max-width:767px) {
     #sidebar-toc {
@@ -200,6 +239,12 @@ footer .col > a {
 #main .breadcrumb {
     background: none;
     padding-left: 0;
+}
+#main .breadcrumb-item.active {
+    color: silver;
+}
+#main .page-metadata {
+    display: none;
 }
 @media screen and (max-width:1280px) {
     #main p {
