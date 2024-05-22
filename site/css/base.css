@@ -2,7 +2,6 @@
     size: 8.5in 11in portrait;
     margin: 25mm 10mm 25mm 10mm;
     counter-increment: page;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     white-space: pre;
     color: grey;
 }
@@ -46,7 +45,6 @@
 
 
 body {
-    font-family: "Lato",Helvetica,Arial,sans-serif;
     font-weight: 200;
     color: #000;
     background-color: #fff;
@@ -66,12 +64,6 @@ h5:hover .headerlink {
     color: #ccc;
 }
 
-.h1, h1,
-.h2, h2,
-.h3, h3 {
-    font-weight: 200;
-    font-family: "Lato",Helvetica,Arial,sans-serif;
-}
 .h2, h2 {
     margin-top: 30px;
 }
@@ -104,11 +96,13 @@ code.hljs {
 }
 
 a {
-    color: #656869;
+    color: #fff;
 }
-
+a:hover {
+    color: #fff;
+}
 a:visited {
-    color: #0073ae;
+    color: #fff;
 }
 
 #main {
@@ -285,11 +279,6 @@ nav.navbar {
 }
 a.dropdown-toggle::after{
     content:none;
-}
-
-#mainnav.navbar {
-    border-bottom: 1px solid #cdcdcd;
-    background-color: white;
 }
 
 

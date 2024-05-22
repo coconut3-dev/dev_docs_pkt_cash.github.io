@@ -15,6 +15,7 @@
     <link rel="canonical" href="https://coconut3-dev.github.io/dev_docs_pkt_cash.github.io/mining/pool_setup_guide/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
     
+    
     <title>Setting up a Pool - PKT Documentation</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -36,12 +37,13 @@
   </head>
   
   <body class="" data-spy="scroll" data-target="#toc">
-    <nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top py-2" role="navigation">
+    <nav id="mainnav" class="navbar navbar-default navbar-expand-md sticky-top py-2" role="navigation">
+  <div class="container">
     <a class="navbar-brand" href="../.." title="PKT Documentation">
-      <img src="../../assets/logo-dark.svg" alt="PKT Documentation">
+      <img src="../../assets/logo.svg" alt="PKT Documentation">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>
     <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
       <ul class="nav navbar-nav ml-auto">
@@ -94,50 +96,51 @@
         </li>
       </ul>
     </div>
+  </div>
 </nav>
     <div id="content"class="container">
       
     <div class="row">
-      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md navbar-light" role="navigation">
+      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md" role="navigation">
   <a class="navbar-brand d-block d-md-none d-xl-none" href="#"><i class="fa fa-book fa-fw"></i> Documentation</a>
-  <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#sidebar-navbar-collapse" aria-controls="sidebar-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler ml-auto hidden-sm-up" type="button" data-toggle="collapse" data-target="#sidebar-navbar-collapse" aria-controls="sidebar-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fa fa-bars fa-fw"></i></span>
   </button>
   <div class="collapse navbar-collapse" id="sidebar-navbar-collapse">
     <!-- Main navigation -->
     <ul class="nav navbar-nav flex-column">
       <li >
-        <a class="nav-link" href="../..">Home</a>
+        <a class="toplevel nav-link" href="../..">Home</a>
       </li>
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#learn">
         <!--<a href="#" class="nav-link">Learn <b class="caret"></b></a>-->
         <span class="section-title">Learn</span>
-        <ul id="learn">
-          
+        <ul id="learn" class="collapse">
+                
 <li>
     <a href="../../learn/pkt/" class="">What is PKT?</a>
 </li>
-          
+                
 <li>
     <a href="../../learn/packetcrypt/" class="">What is PacketCrypt?</a>
 </li>
-          
+                
 <li>
     <a href="../../learn/pkt-cash/" class="">What is PKT Cash?</a>
 </li>
-          
+                
 <li>
     <a href="../../learn/wpkt/" class="">What is WPKT?</a>
 </li>
-          
+                
 <li>
     <a href="../../learn/pkt-network/" class="">What is the PKT Network?</a>
 </li>
-          
+                
 <li>
     <a href="../../learn/network-steward/" class="">What is the Network Steward?</a>
 </li>
-          
+                
 <li>
     <a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" class="">Whitepapers</a>
 </li>
@@ -146,32 +149,32 @@
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#wallet-setup">
         <!--<a href="#" class="nav-link">Wallet Setup <b class="caret"></b></a>-->
         <span class="section-title">Wallet Setup</span>
-        <ul id="wallet-setup">
-          
+        <ul id="wallet-setup" class="collapse">
+                
 <li>
     <a href="../../wallet_setup/pkt-wallet-setup/" class="">How to setup a PKT Wallet</a>
 </li>
-          
+                
 <li>
     <a href="../../wallet_setup/install-from-seed/" class="">Installing from Seed</a>
 </li>
-          
+                
 <li>
     <a href="../../wallet_setup/install-pkt-electrum/" class="">Installing PKT Electrum (Mac/Windows)</a>
 </li>
-          
+                
 <li>
     <a href="../../wallet_setup/pkt-world-wallet/" class="">Installing PKT.World Wallet (Mac/Windows)</a>
 </li>
-          
+                
 <li>
     <a href="../../wallet_setup/pkt-zulu-wallet/" class="">Installing PKT Zulu Wallet (Mac)</a>
 </li>
-          
+                
 <li>
     <a href="../../wallet_setup/pkt-cli-wallet/" class="">Installing PKT CLI Wallet (Mac/Windows/Linux)</a>
 </li>
-          
+                
 <li>
     <a href="../../wallet_setup/wallet-faq/" class="">Wallet FAQ</a>
 </li>
@@ -180,16 +183,16 @@
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#start-mining">
         <!--<a href="#" class="nav-link">Start Mining <b class="caret"></b></a>-->
         <span class="section-title">Start Mining</span>
-        <ul id="start-mining">
-          
+        <ul id="start-mining" class="collapse">
+                
 <li>
     <a href="../../start_mining/intro/" class="">Intro to PKT Mining</a>
 </li>
-          
+                
 <li>
     <a href="../../start_mining/announcement-mining/" class="">How to Start Announcement Mining</a>
 </li>
-          
+                
 <li>
     <a href="../../start_mining/pkt-mining-pool/" class="">How to Setup a PKT Mining Pool</a>
 </li>
@@ -198,40 +201,40 @@
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#developers">
         <!--<a href="#" class="nav-link">Developers <b class="caret"></b></a>-->
         <span class="section-title">Developers</span>
-        <ul id="developers">
-          
+        <ul id="developers" class="collapse">
+                
 <li>
     <a href="../../dev/building-on-pkt/" class="">Building on PKT</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/packetcrypt/" class="">PacketCrypt</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/pkt-vpn/" class="">PKT VPN</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/wiif-sharing/" class="">Wifi Sharing</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/pkt-lightning-deamon/" class="">PKT Lightning Daemon</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/tokenstrike/" class="">TokenStrike</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/cjdns/" class="">Cjdns</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/edge-points/" class="">Edge Points</a>
 </li>
-          
+                
 <li>
     <a href="../../dev/cloud-isp/" class="">Cloud ISPs</a>
 </li>
@@ -240,24 +243,24 @@
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#advanced-learning">
         <!--<a href="#" class="nav-link">Advanced Learning <b class="caret"></b></a>-->
         <span class="section-title">Advanced Learning</span>
-        <ul id="advanced-learning">
-          
+        <ul id="advanced-learning" class="collapse">
+                
 <li>
     <a href="../../adv_learning/cryptoeconomics/" class="">Cryptoeconomics</a>
 </li>
-          
+                
 <li>
     <a href="../../adv_learning/pktd-full-node/" class="">How to Run a Pktd Full Node</a>
 </li>
-          
+                
 <li>
     <a href="../../adv_learning/swap-pkt-wrapped-pkt/" class="">How to Swap PKT and Wrapped PKT</a>
 </li>
-          
+                
 <li>
     <a href="../../adv_learning/buy-pkt/" class="">How to Buy PKT?</a>
 </li>
-          
+                
 <li>
     <a href="../../adv_learning/sell-pkt/" class="">How to Sell PKT?</a>
 </li>
@@ -266,20 +269,20 @@
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#community">
         <!--<a href="#" class="nav-link">Community <b class="caret"></b></a>-->
         <span class="section-title">Community</span>
-        <ul id="community">
-          
+        <ul id="community" class="collapse">
+                
 <li>
     <a href="../../code_of_conduct/" class="">Code of Conduct</a>
 </li>
-          
+                
 <li>
     <a href="../../community/ethica-communication-guidelines/" class="">Ethical Communication Guidelines</a>
 </li>
-          
+                
 <li>
     <a href="../../community/classifieds/" class="">Classifieds</a>
 </li>
-          
+                
 <li>
     <a href="../../community/press-media-assets/" class="">Press & Media Assets</a>
 </li>
@@ -836,7 +839,9 @@ Reload nginx to pick up config changes.
 </ul>
 </div>
       <div id="sidebar-toc" class="sidebar col-md-2">
-        <nav id="toc" data-toggle="toc" class="sticky-top sticky-offset"></nav>
+        <nav id="toc" data-toggle="toc" class="sticky-top sticky-offset">
+          <h4>Table of Contents</h4>
+        </nav>
       </div>
     </div>
     </div><footer class="col-md-12">

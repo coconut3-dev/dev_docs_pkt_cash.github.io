@@ -1,12 +1,12 @@
-<nav id="mainnav" class="navbar navbar-default navbar-expand-md navbar-light sticky-top py-2" role="navigation">
-  
+<nav id="mainnav" class="navbar navbar-default navbar-expand-md sticky-top py-2" role="navigation">
+  <div class="container">
     {%- block site_name %}
     <a class="navbar-brand" href="{{ nav.homepage.url|url }}" title="{{ config.site_name }}">
-      <img src="{{'./assets/logo-dark.svg'|url}}" alt="{{ config.site_name }}">
+      <img src="{{'./assets/logo.svg'|url}}" alt="{{ config.site_name }}">
     </a>
     {%- endblock %}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>
     <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
       {%- block site_nav %}
@@ -80,4 +80,5 @@
         {%- endblock %}
       </ul>
     </div>
+  </div>
 </nav>
