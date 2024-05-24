@@ -133,10 +133,6 @@
 </li>
                 
 <li>
-    <a href="../../learn/pkt-network/" class="">What is the PKT Network?</a>
-</li>
-                
-<li>
     <a href="../../learn/network-steward/" class="">What is the Network Steward?</a>
 </li>
                 
@@ -173,10 +169,6 @@
 <li>
     <a href="../../wallet_setup/pkt-cli-wallet/" class="">Installing PKT CLI Wallet (Mac/Windows/Linux)</a>
 </li>
-                
-<li>
-    <a href="../../wallet_setup/wallet-faq/" class="">Wallet FAQ</a>
-</li>
         </ul>
       </li>
       <li class="toplevel nav-item active" data-toggle="collapse" data-target="#start-mining">
@@ -197,56 +189,10 @@
 </li>
         </ul>
       </li>
-      <li class="toplevel nav-item" data-toggle="collapse" data-target="#developers">
-        <!--<a href="#" class="nav-link">Developers <b class="caret"></b></a>-->
-        <span class="section-title">Developers</span>
-        <ul id="developers" class="collapse">
-                
-<li>
-    <a href="../../dev/building-on-pkt/" class="">Building on PKT</a>
-</li>
-                
-<li>
-    <a href="../../dev/packetcrypt/" class="">PacketCrypt</a>
-</li>
-                
-<li>
-    <a href="../../dev/pkt-vpn/" class="">PKT VPN</a>
-</li>
-                
-<li>
-    <a href="../../dev/wiif-sharing/" class="">Wifi Sharing</a>
-</li>
-                
-<li>
-    <a href="../../dev/pkt-lightning-deamon/" class="">PKT Lightning Daemon</a>
-</li>
-                
-<li>
-    <a href="../../dev/tokenstrike/" class="">TokenStrike</a>
-</li>
-                
-<li>
-    <a href="../../dev/cjdns/" class="">Cjdns</a>
-</li>
-                
-<li>
-    <a href="../../dev/edge-points/" class="">Edge Points</a>
-</li>
-                
-<li>
-    <a href="../../dev/cloud-isp/" class="">Cloud ISPs</a>
-</li>
-        </ul>
-      </li>
       <li class="toplevel nav-item" data-toggle="collapse" data-target="#advanced-learning">
         <!--<a href="#" class="nav-link">Advanced Learning <b class="caret"></b></a>-->
         <span class="section-title">Advanced Learning</span>
         <ul id="advanced-learning" class="collapse">
-                
-<li>
-    <a href="../../adv_learning/cryptoeconomics/" class="">Cryptoeconomics</a>
-</li>
                 
 <li>
     <a href="../../adv_learning/pktd-full-node/" class="">How to Run a Pktd Full Node</a>
@@ -254,14 +200,6 @@
                 
 <li>
     <a href="../../adv_learning/swap-pkt-wrapped-pkt/" class="">How to Swap PKT and Wrapped PKT</a>
-</li>
-                
-<li>
-    <a href="../../adv_learning/buy-pkt/" class="">How to Buy PKT?</a>
-</li>
-                
-<li>
-    <a href="../../adv_learning/sell-pkt/" class="">How to Sell PKT?</a>
 </li>
         </ul>
       </li>
@@ -490,7 +428,7 @@ in block mining, contact the pool operator and discuss sending hardware to their
   Master in order to make the pool pay out the announcement and block miners</li>
 </ul>
 <h2 id="packetcrypt-data-flow">PacketCrypt Data Flow<a class="headerlink" href="#packetcrypt-data-flow" title="Permanent link">&para;</a></h2>
-<p><img alt="packetcrypt_data_flow" src="./packetcrypt_data_flow.png" /></p>
+<p><img alt="packetcrypt_data_flow" src="../packetcrypt_data_flow.png" /></p>
 <ul>
 <li><span style="color:#ff9900">█</span> Orange: Announcements are sent from the Announcement miners
   to the Ann Handlers and then to the Block miners</li>
@@ -548,7 +486,7 @@ block-period and all announcements have an initial announcement difficulty of 12
 software can choose to mine with 1000 announcements at 128 effective difficulty, or with 2000
 announcements at 64 effective difficulty, or with 3000 announcements at 32 effective difficulty and
 so on.</p>
-<p><img alt="ann_selection.png" src="./ann_selection.png" /></p>
+<p><img alt="ann_selection.png" src="../ann_selection.png" /></p>
 <p>The best choice is to use the previous <em>three</em> block periods which provides a power multiplier that
 is 225% higher than that of using just the most recent 1 period worth of announcements. This curve
 is the same no matter what difficulty we are starting with.</p>
@@ -562,7 +500,7 @@ we can reason that the power multiplier will be <code>1000 ** 2</code> or 1 mill
 but since 2 block periods can be used, the power multiplier is the same.</p>
 <p>At difficulty 4, the announcement miners will produce 250 announcements per block period and they
 will be valid for 3 block periods making the power multiplier <code>750 ** 2</code> or 562,500.</p>
-<p><img alt="ann_diff_power.png" src="./ann_diff_power.png" /></p>
+<p><img alt="ann_diff_power.png" src="../ann_diff_power.png" /></p>
 <p>From here, the power output of the power multiplier of the optimal announcement set halves for each
 doubling of the announcement difficulty, making the optimal difficulty <code>2</code>.</p>
 <hr />

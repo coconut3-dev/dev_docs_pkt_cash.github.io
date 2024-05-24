@@ -55,6 +55,12 @@ pre code {
 button:focus {
     outline:none;
 }
+.codehilite, .highlight {
+    background-color: #202f5a;
+}
+h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .headerlink, h5:hover .headerlink {
+    display: none;
+}
 /***************************************************
 * Header
 ***************************************************/
@@ -189,6 +195,9 @@ footer .col > a {
 #sidebar-nav .navbar-expand-md .navbar-nav .nav-link:before {
     display: none;
 }
+#sidebar-nav .toplevel .section-title {
+    cursor: pointer;
+}
 @media screen and (max-width:767px) {
     #sidebar-nav .navbar-toggler {
         margin: 0;
@@ -199,10 +208,13 @@ footer .col > a {
         border: 0;
         background: #fff;
     }
+    #sidebar-nav .navbar-toggler .navbar-toggler-icon {
+        color: #00052f;
+    }
     #sidebar-nav .navbar-toggler .navbar-toggler-icon i {
         line-height: 30px;
     }
-    #sidebar-navbar-collapse.show {
+    #sidebar-navbar-collapse {
         position: fixed;
         top: 0;
         left: 0;
@@ -213,14 +225,18 @@ footer .col > a {
         background: rgba(0, 5, 47, .5);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
         -ms-align-items: center;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        opacity: 0;
+    }
+    #sidebar-navbar-collapse.show {
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        opacity: 1;
     }
 }
 /***************************************************
@@ -262,10 +278,12 @@ footer .col > a {
 }
 #main img {
     max-width: 50%;
+    display: block;
 }
 #main pre {
     max-width: 50vw;
     overflow: auto;
+    display: block;
 }
 #main .breadcrumb {
     background: none;
